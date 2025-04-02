@@ -1,0 +1,226 @@
+----------------------------------------------------------------------------------------
+
+                            Introduction to Front-End Development
+
+----------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 1
+
+***************************************************************************************
+----------------------------------------------------------------------------------------
+
+* HTML is used to structure the content that is being displayed in the webpages.
+* CSS is used to control the colour and the style of the webpage.
+* JavaScript is used to add interactivity to the webpage.
+
+----------------------------------------------------------------------------------------
+
+HTML :- HyperText Markup Language
+    * HTML is a markup language that is used to create the structure of a webpage.
+    * HTML is not a programming language.
+
+CSS :- Cascading Style Sheets
+    * CSS is a style sheet language that is used to control the layout and appearance of a webpage.
+    * CSS is not a programming language.
+    * CSS is used to style the HTML elements.
+    * CSS is used to control the colour, font, size, and layout of the HTML elements.
+
+JavaScript :-
+    * JavaScript is a programming language that is used to add interactivity to a webpage.
+    * JavaScript is used to create dynamic content on a webpage.
+    * JavaScript is used to manipulate the HTML and CSS of a webpage.
+    * JavaScript is used to create animations and effects on a webpage.
+    * JavaScript is used to create web applications.
+
+-------------------------------------------------------------------------------------------
+How does the Browser Work?
+    * The browser is a software application that is used to access the internet.
+    * The browser is used to display the HTML, CSS, and JavaScript code that is used to create a webpage.
+    * The browser is used to interpret the HTML, CSS, and JavaScript code and display the webpage to the user.
+    * The browser is used to send requests to the server and receive responses from the server.
+    * The browser is used to cache the webpages that are visited by the user.
+
+---------------------------------------------------------------------------------------------
+Web Hosting:-
+    * It is a service that allows hosting of websites on the internet.
+    * Types of web hosting:
+        1. Shared Hosting :-
+            * It is a type of web hosting where multiple websites are hosted
+                on a single server.
+            * It is the most common and affordable type of web hosting.
+            * It is suitable for small websites and blogs.
+            * It is not suitable for large websites and applications.
+
+        2. VPS (Virtual Private Service) Hosting:-
+            * It is a type of web hosting where a single server is divided into
+                multiple virtual servers.
+            * Each virtual server has its own resources and can run its own
+                operating system.
+            * It is suitable for medium-sized websites and applications.
+
+        3. Dedicated Hosting:-
+            * It is a type of web hosting where a single server is dedicated to
+                a single website.
+            * It is suitable for large websites and applications that require
+                high performance and security.
+            * It is the most expensive type of web hosting.
+
+        4. Cloud Hosting:-
+            * It is a type of web hosting where multiple servers are used to
+                host a website.
+            * It is suitable for websites and applications that require high
+                performance and scalability.
+            * It is the most flexible type of web hosting.
+
+---------------------------------------------------------------------------------------------
+TCP:-
+    * TCP (Transmission Control Protocol) is a protocol that is used to
+        establish a connection between two devices on a network.
+    * TCP is a reliable protocol that ensures that data is transmitted
+        correctly and in the correct order.
+    * TCP is used to transmit data over the internet.
+
+---------------------------------------------------------------------------------------------
+UDP:-
+    * UDP (User Datagram Protocol) is a protocol that is used to transmit
+        data over the internet.
+    * UDP is an unreliable protocol that does not ensure that data is
+        transmitted correctly or in the correct order.
+    * UDP is used for real-time applications such as video streaming and
+        online gaming.
+
+---------------------------------------------------------------------------------------------
+HTTP:-
+    * HTTP (Hypertext Transfer Protocol) is a protocol that is used to
+        transmit data over the internet.
+    * HTTP is a reliable protocol that ensures that data is transmitted
+        correctly and in the correct order.
+    * HTTP is used to transmit data over the internet.
+
+    * There are 4 types of HTTP requests:
+        i. GET :- Used to retrieve data from a server.
+        ii. POST :- Used to send data to a server.
+        iii. PUT :- Used to update data on a server.
+        iv. DELETE :- Used to delete data from a server.
+---------------------------------------------------------------------------------------------
+HTTP Response:-
+    * HTTP Response is a message sent by a server to a client in response to an HTTP request.
+    * HTTP Response contains a status code, headers, a body and a status message.
+    * HTTP Response status codes are used to indicate the status of the request.
+    * HTTP Response status codes are divided into 5 categories:
+        i. Informational responses (100-199)
+        ii. Successful responses (200-299)
+        iii. Redirection responses (300-399)
+        iv. Client error responses (400-499)
+        v. Server error responses (500-599)
+        vi. Other responses (600-699)
+        vii. Custom responses (700-1099)
+
+---------------------------------------------------------------------------------------------
+HTTPS:-
+    * It is a secured protocol used to encrypt data between a client and a server.
+    * HTTPS uses SSL/TLS to encrypt data.
+    * HTTPS is more secure than HTTP.
+
+---------------------------------------------------------------------------------------------
+DNS:-
+    * It is a protocol used to translate domain names into IP addresses.
+    * DNS is used to resolve domain names into IP addresses.
+    Ex:-
+        i. www.google.com -> 172.217.168.142
+                domain name:- www.google.com
+                IP address:- 172.217.168.142
+
+        ii. www.facebook.com -> 157.240.23.35
+                domain name:- www.facebook.com
+                IP address:- 157.240.23.35
+
+---------------------------------------------------------------------------------------------
+DHCP:-
+    * It stands for Dynamic Host Configuration Protocol.
+    * This works when a device connects to a network and needs an IP address.
+    * It assigns IP addresses dynamically, reducing the need for manual configuration.
+
+---------------------------------------------------------------------------------------------
+IMAP:-
+    * It stands for Internet Message Access Protocol.
+    * This is used to access email messages from a server.
+    * It allows users to retrieve email messages from a server.
+
+---------------------------------------------------------------------------------------------
+SMTP:-
+    * It stands for Simple Mail Transfer Protocol.
+    * This is used to send email messages from a server.
+    * It allows users to send email messages from a server.
+
+---------------------------------------------------------------------------------------------
+POP3:-
+    * It stands for Post Office Protocol version 3.
+    * This is used to access email messages from a server.
+    * It allows users to retrieve email messages from a server.
+
+---------------------------------------------------------------------------------------------
+FTP:-
+    * It stands for File Transfer Protocol.
+    * This is used to transfer files between a client and a server.
+    * It allows users to upload and download files from a server.
+
+---------------------------------------------------------------------------------------------
+SSH:-
+    * It stands for Secure Shell.
+    * This is used to securely access a remote server.
+    * It allows users to securely access a remote server.
+
+---------------------------------------------------------------------------------------------
+SFTP:-
+    * It stands for Secure File Transfer Protocol.
+    * This is used to securely transfer files between a client and a server.
+    * It allows users to securely upload and download files from a server.
+
+---------------------------------------------------------------------------------------------
+Framework:-
+    * Block of reusable code that provides a foundation for building web applications.
+    * It provides a set of tools and libraries for building web applications.
+    * It allows developers to build web applications faster and more efficiently.
+
+---------------------------------------------------------------------------------------------
+Library:-
+    * Block of reusable code that provides a set of tools and libraries for building web applications.
+    * It allows developers to build web applications faster and more efficiently.
+    * It provides a set of tools and libraries for building web applications.
+
+---------------------------------------------------------------------------------------------
+API:-
+    * API stands for Application Programming Interface.
+    * It provides a set of tools and libraries for building web applications.
+    * It allows developers to build web applications faster and more efficiently.
+    * It provides a set of tools and libraries for building web applications.
+    * Web APIs are a set of tools and libraries for building web applications.
+
+---------------------------------------------------------------------------------------------
+REST:-
+    * REST stands for Representational State Transfer.
+    * It is an architectural style for building web applications.
+    * It is a set of tools and libraries for building web applications.
+    * One of the main use of this API is to send and receive data from a centralized database
+
+---------------------------------------------------------------------------------------------
+Sensor-Based APIs
+    * Sensor-Based APIs are a set of tools and libraries for building web applications.
+    * It allows developers to build web applications faster and more efficiently.
+    * It provides a set of tools and libraries for building web applications.
+    * One of the main use of this API is to send and receive data from a centralized database
+
+    Ex:- Philips Hue
+
+---------------------------------------------------------------------------------------------
+Endpoints
+    * An endpoint is a URL that is used to access a web API.
+    * It is a URL that is used to send and receive data from a web API.
+    * It is a URL that is used to access a web API.
+
+    Ex:- https://api.example.com/users
+            https://api.example.com/products
+
+---------------------------------------------------------------------------------------------
