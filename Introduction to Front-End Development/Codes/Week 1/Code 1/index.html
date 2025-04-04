@@ -1,50 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>Little Lemon</title>
-    <link href="bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center">
-                    <img src="logo.png" class="img-fluid" id="logo1">
-                </div>
+    <head>
+        <title>Little Lemon</title>
+    </head>
+    <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/800px-Google_Images_2015_logo.svg.png"
+        width="200px"
+        height="100px"
+        alt="Google Images Logo"
+    />
+    <body>
+        <h1>Our Menu</h1>
+        <h2>Falafel</h2>
+        <p>This is a chicken wrap</p>
+        <h2>Salad</h2>
+
+        <h1>We are listing the items</h1>
+        <ul>
+            <li>Falafel</li>
+            <li>Salad</li>
+            <li>Chicken Wrap</li>
+            <li>Vegetable Wrap</li>
+            <li>Fish Wrap</li>
+        </ul>
+        <h1>THis is not a division</h1>
+        <div>
+            <h1>THis is a division</h1>
+        </div>
+
+        <style>
+            div {
+                border: 1px solid black;
+                padding: 2px;
+            }
+        </style>
+        <div>
+            <h1>THis is a division</h1>
+        </div>
+
+        <!-- Though we have added the div before adding the style,
+            but this will affect on all the divs present in the document -->
+
+        <div>
+            <div>
+                <!--  Since the style is adding a border,
+                    in this case it will add two boder lines -->
+
+                <h2>THis is a h2 line</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center">
-                    <h1 id="menu">Our Menu</h1>
-                </div>
-                <div class="alert alert-info" role="alert">
-                    Our resturaunt will be closed on New Year's Day
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <h2>Falafel <span class="badge bg-secondary">New</span></h2>
-                <p>Chickpea, herbs, spices.</p>
-                <h2>Fried Calamari</h2>
-                <p>Squid, buttermilk.</p>
-            </div>
-            <div class="col-12 col-lg-6">
-                <h2>Pasta Salad</h2>
-                <p>Lettuce, vegetables, mozzarella.</p>
-                <h2>Greek Salad</h2>
-                <p>Cucumbers, onion, feta cheese.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="text-center">
-                    <button type="button" class="btn btn-primary">Order Online</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="bootstrap.bundle.min.js"></script>
-</body>
+        <a href="location.html">location.html</a>
+
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+        <table>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <!-- This is known as table data tag -->
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 3</td>
+                <!-- This is known as table data tag -->
+                <td>Data 4</td>
+            </tr>
+        </table>
+    </body>
 </html>

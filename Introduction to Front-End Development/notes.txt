@@ -223,4 +223,211 @@ Endpoints
     Ex:- https://api.example.com/users
             https://api.example.com/products
 
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 2
+
+***************************************************************************************
+----------------------------------------------------------------------------------------
+HTML Tags:-
+
+    i. Opening tag :- <tagname>
+    ii. Closing tag :- </tagname>
+    iii. Self-closing tag :- <tagname/>
+        Ex:- line break tag <br/>
+    iv. Empty tag :- <tagname></tagname>
+    v. Block-level tag :- <tagname>
+    vi. Inline tag :- <tagname></tagname>
+
+----------------------------------------------------------------------------------------
+HTML codes start with:-
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Title of the document</title>
+        </head>
+        <body>
+            <h1>Heading 1</h1>
+            <p>Paragraph</p>
+        </body>
+    </html>
+
+----------------------------------------------------------------------------------------
+Lists in html:-
+    1. As bullet points
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <!-- This will create list of 3 items in the webpage -->
+
+    2. As numbered list
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+
+        <!-- This will create list of 3 items in the webpage -->
+    
+----------------------------------------------------------------------------------------
+Div tags in html:-
+    * <div> this tag is used to add content division in the HTML document.
+    * It has no use unless styled with CSS.
+    * It is used to group elements together for styling purposes.
+
+    Ex:-
+        <div>
+            <h1>Heading 1</h1>
+            <p>Paragraph</p>
+        </div>
+
+        <!-- This will create a division in the webpage with heading and paragraph -->
+----------------------------------------------------------------------------------------
+Anchor tag:-
+    * <a> this tag is used to create a hyperlink in the HTML document.
+    * It is used to link to other webpages or resources.
+
+    Ex:-
+        <a href="https://www.google.com">Google</a>
+
+        <!-- This will create a hyperlink to google.com -->
+
+----------------------------------------------------------------------------------------
+Img tag:-
+    * <img> this tag is used to add images in the HTML document.
+    * It is used to display images on the webpage.
+
+    Ex:-
+        <img src="image.jpg" alt="Image">
+        <!-- This will display an image on the webpage -->
+
+To add height and width to the image:-
+    * <img src="image.jpg" alt="Image" height="100" width="100">
+        <!-- This will display an image on the webpage with height and width -->
+
+----------------------------------------------------------------------------------------
+Alt tag:-
+    * The alt tag is used to provide a text description of an image.
+    * It is used to provide a text description of an image for accessibility & SEO purposes.
+
+    Ex:-
+        <img src="image.jpg" alt="Image">
+
+        <!-- This will display an image on the webpage with alt tag -->
+
+----------------------------------------------------------------------------------------
+HTML tables:-
+    * <table> this tag is used to create a table in the HTML document.
+    * It is used to display data in a tabular format.
+
+    Ex:-
+        <table>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>Data 1</td> <!-- This is known as table data tag -->
+                <td>Data 2</td>
+            </tr>
+        </table>
+
+        <!-- This will create a table with 2 headers and 2 data rows -->
+
+----------------------------------------------------------------------------------------
+HTML Form:-
+    * <form> this tag is used to create a form in the HTML document.
+    * It is used to collect user input.
+
+    Ex:-
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- This will create a form with a text input and a submit button -->
+
+----------------------------------------------------------------------------------------
+HTML form input types:-
+    1. <input type="text" id="name" name="name"> - Text input
+    2. <input type="password" id="password" name="password"> - Password input
+    3. <input type="email" id="email" name="email"> - Email input
+    4. <input type="number" id="number" name="number"> - Number input
+    5. <input type="date" id="date" name="date"> - Date input
+    6. <input type="file" id="file" name="file"> - File input
+    7. <input type="checkbox" id="checkbox" name="checkbox"> - Checkbox input
+    8. <input type="radio" id="radio" name="radio"> - Radio input
+    9. <input type="submit" value="Submit"> - Submit button
+    10. <input type="reset" value="Reset"> - Reset button
+    11. <input type="button" value="Button"> - Button
+    12. <input type="hidden" id="hidden" name="hidden"> - Hidden input
+    13. <input type="search" id="search" name="search"> - Search input
+    14. <input type="tel" id="tel" name="tel"> - Telephone input
+    15. <input type="url" id="url" name="url"> - URL input
+    16. <input type="color" id="color" name="color"> - Color input
+    17. <input type="range" id="range" name="range"> - Range input
+    18. <input type="datetime-local" id="datetime-local" name="datetime-local"> - Date and time input
+    19. <input type="month" id="month" name="month"> - Month input
+    20. <input type="week" id="week" name="week"> - Week input
+    21. <input type="time" id="time" name="time"> - Time input
+    22. <input type="image" id="image" name="image"> - Image input
+    23. <input type="textarea" id="textarea" name="textarea"> - Text area input
+
+----------------------------------------------------------------------------------------
+Form action:-
+    * The action attribute is used to specify the URL where the form data will be sent.
+    * It is used to specify the URL where the form data will be sent when the form is submitted.
+
+    Ex:-
+        <form action="https://www.example.com/form-submit" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- This will create a form with a text input and a submit button that will send the data to example.com -->
+----------------------------------------------------------------------------------------
+DOM (Document Object Model):-
+    * The DOM is a programming interface for HTML and XML documents.
+    * It represents the structure of a document as a tree of objects.
+    * It allows developers to manipulate the structure, style, and content of a document.
+
+    Ex:-
+        var element = document.getElementById("element-id");
+        element.innerHTML = "New content";
+
+        <!-- This will change the content of the element with id "element-id" to "New content" -->
+
+----------------------------------------------------------------------------------------
+World accessibility Intiative (WAI):-
+    * It is an initiative that aims to make the web more accessible to people with disabilities.
+    * It provides guidelines and resources for making web content more accessible.
+    * It is a part of the World Wide Web Consortium (W3C).
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
