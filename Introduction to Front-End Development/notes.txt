@@ -555,6 +555,173 @@ Types of selector in CSS:-
         }
 
 ----------------------------------------------------------------------------------------
+Ways to Color a text in CSS:-
+    i. By using RGB value:-
+        * Set the RBG value of the color in the CSS code.
+        Ex:-
+            h1 {
+                color: rgb(255, 0, 0);
+            }
+
+            <!-- This will change the color of all h1 elements to red -->
+
+    ii. By using RGBA value
+        * Set the RGBA value of the color in the CSS code.
+        * The last value is the opacity of the color.
+        * The value can be between 0 and 1.
+        * 0 is fully transparent and 1 is fully opaque.
+        * The value can be in decimal or fraction.
+
+        Ex:-
+            h1 {
+                color: rgba(255, 0, 0, 0.5);
+            }
+
+            <!-- This will change the color of all h1 elements to red with 50% opacity -->
+    
+    iii. By using HSL value
+        * Set the HSL value of the color in the CSS code.
+        * The first value is the `hue`, 
+            the second value is the `saturation` and 
+                the third value is the `lightness`.
+        * The hue value can be between 0 and 360.
+            Ex:-
+                0 is red, 120 is green and 240 is blue.
+        * The saturation value can be between 0% and 100%.
+        * The lightness value can be between 0% and 100%.
+        * The value can be in decimal or fraction.
+
+        Ex:-
+            h1 {
+                color: hsl(0, 100%, 50%);
+            }
+
+            <!-- This will change the color of all h1 elements to red -->
+    
+    iv. By using hex value
+        * Set the hex value of the color in the CSS code.
+        * The hex value is a 6 digit code that represents the color.
+        * The first 2 digits represent the red value, 
+            the second 2 digits represent the green value and 
+                the last 2 digits represent the blue value.
+
+        Ex:-
+            h1 {
+                color: #ff0000;
+            }
+
+            <!-- This will change the color of all h1 elements to red -->
+    
+    v. By using color name
+        * Set the color name in the CSS code.
+        * The color name can be any valid color name.
+        * The color name can be in lowercase or uppercase.
+        Ex:-
+            h1 {
+                color: red;
+            }
+
+            <!-- This will change the color of all h1 elements to red -->
+
+----------------------------------------------------------------------------------------
+Text Font and Size:-
+    * To set the font and size of the text in CSS, 
+        use the `font-family` and `font-size` properties.
+
+    Ex:-
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 24px;
+            text-tranform: uppercase;
+        }
+        
+        <!-- This will set the followig:- -->
+        <!-- Font family to Arial -->
+        <!-- Font weight to bold -->
+        <!-- Font size to 24px -->
+        <!-- Text transform to uppercase -->
+        <!-- This will change the font of all h1 elements to Arial with bold and 24px size -->
+        
+----------------------------------------------------------------------------------------
+Box Model :-
+    * The box model is a way to represent the structure of an HTML element.
+    * It consists of the following parts:
+        1. Content: The actual content of the element.
+            * The size of this content are known as content width and content height.
+        2. Padding: The space between the content and the border.
+            * The size of this padding is known as padding width.
+            * The padding can be of any color & size.
+        3. Border: The border around the element.
+            * The size of this border is known as border width.
+            * The border can be solid, dashed, dotted, etc.
+            * The border can be of any color & size.
+        4. Margin: The space outside the border.
+            * The size of this margin is known as margin width.
+            * The margin can be of any color & size.
+
+    Ex:-
+        div {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 5px solid black;
+            margin: 20px;
+        }
+
+        <!-- This will create a div with width of 200px, height of 100px, padding of 10px, border of 5px and margin of 20px -->
+        <!-- The total width of the div will be 200px + 10px + 5px + 20px = 235px -->
+        <!-- The total height of the div will be 100px + 10px + 5px + 20px = 135px -->
+
+----------------------------------------------------------------------------------------
+Types of elements:-
+    1. Block-level elements:-
+        * These elements take up the full width of their parent element.
+        * They start on a new line and take up the full width of their parent element.
+        * They can contain other block-level elements and inline elements.
+
+        Ex:-
+            <div>
+                <h1>Heading 1</h1>
+                <p>Paragraph</p>
+            </div>
+
+            <!-- This will create a div with heading and paragraph -->
+
+    2. Inline elements:-
+        * These elements do not take up the full width of their parent element.
+        * They do not start on a new line and take up only the space they need.
+        * They can only contain other inline elements.
+
+        Ex:-
+            <span>
+                <a href="#">Link</a>
+            </span>
+
+            <!-- This will create a span with a link -->
+
+----------------------------------------------------------------------------------------
+Display Block:-
+    * The display block property is used to make an element a block-level element.
+    * It is used to make an element take up the full width of its parent element.
+
+    Ex:-
+        div {
+            display: block;
+        }
+
+        <!-- This will make the div a block-level element -->
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------------------------
