@@ -1,27 +1,28 @@
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
                             Introduction to Front-End Development
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 ***************************************************************************************
 
                                     Week 1
 
 ***************************************************************************************
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 * HTML is used to structure the content that is being displayed in the webpages.
 * CSS is used to control the colour and the style of the webpage.
 * JavaScript is used to add interactivity to the webpage.
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 HTML :- HyperText Markup Language
     * HTML is a markup language that is used to create the structure of a webpage.
     * HTML is not a programming language.
 
 CSS :- Cascading Style Sheets
-    * CSS is a style sheet language that is used to control the layout and appearance of a webpage.
+    * CSS is a style sheet language that is used to control the layout and appearance
+        of a webpage.
     * CSS is not a programming language.
     * CSS is used to style the HTML elements.
     * CSS is used to control the colour, font, size, and layout of the HTML elements.
@@ -33,12 +34,15 @@ JavaScript :-
     * JavaScript is used to create animations and effects on a webpage.
     * JavaScript is used to create web applications.
 
--------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 How does the Browser Work?
     * The browser is a software application that is used to access the internet.
-    * The browser is used to display the HTML, CSS, and JavaScript code that is used to create a webpage.
-    * The browser is used to interpret the HTML, CSS, and JavaScript code and display the webpage to the user.
-    * The browser is used to send requests to the server and receive responses from the server.
+    * The browser is used to display the HTML, CSS, and JavaScript code that is used to
+        create a webpage.
+    * The browser is used to interpret the HTML, CSS, and JavaScript code and display the
+        webpage to the user.
+    * The browser is used to send requests to the server and receive responses from
+        the server.
     * The browser is used to cache the webpages that are visited by the user.
 
 ---------------------------------------------------------------------------------------------
@@ -186,7 +190,8 @@ Framework:-
 
 ---------------------------------------------------------------------------------------------
 Library:-
-    * Block of reusable code that provides a set of tools and libraries for building web applications.
+    * Block of reusable code that provides a set of tools and libraries for building
+        web applications.
     * It allows developers to build web applications faster and more efficiently.
     * It provides a set of tools and libraries for building web applications.
 
@@ -203,14 +208,16 @@ REST:-
     * REST stands for Representational State Transfer.
     * It is an architectural style for building web applications.
     * It is a set of tools and libraries for building web applications.
-    * One of the main use of this API is to send and receive data from a centralized database
+    * One of the main use of this API is to send and receive data from a
+        centralized database
 
 ---------------------------------------------------------------------------------------------
 Sensor-Based APIs
     * Sensor-Based APIs are a set of tools and libraries for building web applications.
     * It allows developers to build web applications faster and more efficiently.
     * It provides a set of tools and libraries for building web applications.
-    * One of the main use of this API is to send and receive data from a centralized database
+    * One of the main use of this API is to send and receive data from a centralized
+        database
 
     Ex:- Philips Hue
 
@@ -223,13 +230,13 @@ Endpoints
     Ex:- https://api.example.com/users
             https://api.example.com/products
 
-----------------------------------------------------------------------------------------
-***************************************************************************************
+---------------------------------------------------------------------------------------------
+*********************************************************************************************
 
-                                    Week 2
+                                            Week 2
 
-***************************************************************************************
-----------------------------------------------------------------------------------------
+*********************************************************************************************
+---------------------------------------------------------------------------------------------
 HTML Tags:-
 
     i. Opening tag :- <tagname>
@@ -240,7 +247,7 @@ HTML Tags:-
     v. Block-level tag :- <tagname>
     vi. Inline tag :- <tagname></tagname>
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 HTML codes start with:-
     <!DOCTYPE html>
     <html>
@@ -253,7 +260,7 @@ HTML codes start with:-
         </body>
     </html>
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Lists in html:-
     1. As bullet points
         <ul>
@@ -272,8 +279,8 @@ Lists in html:-
         </ol>
 
         <!-- This will create list of 3 items in the webpage -->
-    
-----------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
 Div tags in html:-
     * <div> this tag is used to add content division in the HTML document.
     * It has no use unless styled with CSS.
@@ -286,7 +293,7 @@ Div tags in html:-
         </div>
 
         <!-- This will create a division in the webpage with heading and paragraph -->
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Anchor tag:-
     * <a> this tag is used to create a hyperlink in the HTML document.
     * It is used to link to other webpages or resources.
@@ -296,7 +303,7 @@ Anchor tag:-
 
         <!-- This will create a hyperlink to google.com -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Img tag:-
     * <img> this tag is used to add images in the HTML document.
     * It is used to display images on the webpage.
@@ -309,7 +316,7 @@ To add height and width to the image:-
     * <img src="image.jpg" alt="Image" height="100" width="100">
         <!-- This will display an image on the webpage with height and width -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Alt tag:-
     * The alt tag is used to provide a text description of an image.
     * It is used to provide a text description of an image for accessibility & SEO purposes.
@@ -319,10 +326,13 @@ Alt tag:-
 
         <!-- This will display an image on the webpage with alt tag -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 HTML tables:-
-    * <table> this tag is used to create a table in the HTML document.
     * It is used to display data in a tabular format.
+    * <table> tag is used to create a table.
+    * <tr> tag is used to create a table row.
+    * <th> tag is used to create a table header.
+    * <td> tag is used to create a table data cell.
 
     Ex:-
         <table>
@@ -338,7 +348,16 @@ HTML tables:-
 
         <!-- This will create a table with 2 headers and 2 data rows -->
 
-----------------------------------------------------------------------------------------
+        ----------------------------------------------------------------
+
+        It looks something like this:-
+        +----------+----------+
+        | Header 1 | Header 2 |
+        +----------+----------+
+        | Data 1   | Data 2   |
+        +----------+----------+
+
+---------------------------------------------------------------------------------------------
 HTML Form:-
     * <form> this tag is used to create a form in the HTML document.
     * It is used to collect user input.
@@ -352,7 +371,7 @@ HTML Form:-
 
         <!-- This will create a form with a text input and a submit button -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 HTML form input types:-
     1. <input type="text" id="name" name="name"> - Text input
     2. <input type="password" id="password" name="password"> - Password input
@@ -371,17 +390,19 @@ HTML form input types:-
     15. <input type="url" id="url" name="url"> - URL input
     16. <input type="color" id="color" name="color"> - Color input
     17. <input type="range" id="range" name="range"> - Range input
-    18. <input type="datetime-local" id="datetime-local" name="datetime-local"> - Date and time input
+    18. <input type="datetime-local" id="datetime-local" name="datetime-local"> -
+        Date and time input
     19. <input type="month" id="month" name="month"> - Month input
     20. <input type="week" id="week" name="week"> - Week input
     21. <input type="time" id="time" name="time"> - Time input
     22. <input type="image" id="image" name="image"> - Image input
     23. <input type="textarea" id="textarea" name="textarea"> - Text area input
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Form action:-
     * The action attribute is used to specify the URL where the form data will be sent.
-    * It is used to specify the URL where the form data will be sent when the form is submitted.
+    * It is used to specify the URL where the form data will be sent when the form is
+        submitted.
 
     Ex:-
         <form action="https://www.example.com/form-submit" method="POST">
@@ -390,8 +411,9 @@ Form action:-
             <input type="submit" value="Submit">
         </form>
 
-        <!-- This will create a form with a text input and a submit button that will send the data to example.com -->
-----------------------------------------------------------------------------------------
+        <!-- This will create a form with a text input and a submit button that will
+            send the data to example.com -->
+---------------------------------------------------------------------------------------------
 DOM (Document Object Model):-
     * The DOM is a programming interface for HTML and XML documents.
     * It represents the structure of a document as a tree of objects.
@@ -401,25 +423,27 @@ DOM (Document Object Model):-
         var element = document.getElementById("element-id");
         element.innerHTML = "New content";
 
-        <!-- This will change the content of the element with id "element-id" to "New content" -->
+        <!-- This will change the content of the element with id "element-id" to
+            "New content" -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 World accessibility Intiative (WAI):-
-    * It is an initiative that aims to make the web more accessible to people with disabilities.
+    * It is an initiative that aims to make the web more accessible to people with
+        disabilities.
     * It provides guidelines and resources for making web content more accessible.
     * It is a part of the World Wide Web Consortium (W3C).
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 
                                                 CSS
 
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Link CSS to HTML:-
     * To link a CSS file to an HTML document,
         use the <link> tag in the <head> section of the HTML document.
-    
+
     Ex:-
         There are two files `index.html` and `style.css`
 
@@ -434,7 +458,7 @@ Link CSS to HTML:-
             </body>
         </html>
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Types of selector in CSS:-
     1. element selector:-
         Here the elements are selected based on their tag name.
@@ -444,7 +468,7 @@ Types of selector in CSS:-
             }
 
             <!-- This will change the color of all h1 elements to red -->
-    
+
     2. class selector:-
         Here the elements are selected based on their class name.
         Ex:-
@@ -452,8 +476,9 @@ Types of selector in CSS:-
                 color: red;
             }
 
-            <!-- This will change the color of all elements with class "class-name" to red -->
-    
+            <!-- This will change the color of all elements with class "class-name"
+                to red -->
+
     3. id selector:-
         Here the elements are selected based on their id name.
         Ex:-
@@ -470,8 +495,9 @@ Types of selector in CSS:-
                 color: red;
             }
 
-            <!-- This will change the color of all elements with attribute "attribute-name" to red -->
-    
+            <!-- This will change the color of all elements with attribute
+                "attribute-name" to red -->
+
     5. Descendant selector:-
         Here the elements are selected based on their parent element.
         Ex:-
@@ -479,7 +505,8 @@ Types of selector in CSS:-
                 color: red;
             }
 
-            <!-- This will change the color of all child elements of parent element to red -->
+            <!-- This will change the color of all child elements of parent element
+                to red -->
 
         `index.html` file,
         <html>
@@ -507,7 +534,8 @@ Types of selector in CSS:-
                 color: red;
             }
 
-            <!-- This will change the color of all child elements of parent element to red -->
+            <!-- This will change the color of all child elements of parent element to
+                red -->
 
         `index.html` file,
         <html>
@@ -554,7 +582,7 @@ Types of selector in CSS:-
             color: red;
         }
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Ways to Color a text in CSS:-
     i. By using RGB value:-
         * Set the RBG value of the color in the CSS code.
@@ -577,12 +605,13 @@ Ways to Color a text in CSS:-
                 color: rgba(255, 0, 0, 0.5);
             }
 
+            rgba(119, 162, 54, 0.1)
             <!-- This will change the color of all h1 elements to red with 50% opacity -->
-    
+
     iii. By using HSL value
         * Set the HSL value of the color in the CSS code.
-        * The first value is the `hue`, 
-            the second value is the `saturation` and 
+        * The first value is the `hue`,
+            the second value is the `saturation` and
                 the third value is the `lightness`.
         * The hue value can be between 0 and 360.
             Ex:-
@@ -597,12 +626,12 @@ Ways to Color a text in CSS:-
             }
 
             <!-- This will change the color of all h1 elements to red -->
-    
+
     iv. By using hex value
         * Set the hex value of the color in the CSS code.
         * The hex value is a 6 digit code that represents the color.
-        * The first 2 digits represent the red value, 
-            the second 2 digits represent the green value and 
+        * The first 2 digits represent the red value,
+            the second 2 digits represent the green value and
                 the last 2 digits represent the blue value.
 
         Ex:-
@@ -611,7 +640,7 @@ Ways to Color a text in CSS:-
             }
 
             <!-- This will change the color of all h1 elements to red -->
-    
+
     v. By using color name
         * Set the color name in the CSS code.
         * The color name can be any valid color name.
@@ -623,9 +652,9 @@ Ways to Color a text in CSS:-
 
             <!-- This will change the color of all h1 elements to red -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Text Font and Size:-
-    * To set the font and size of the text in CSS, 
+    * To set the font and size of the text in CSS,
         use the `font-family` and `font-size` properties.
 
     Ex:-
@@ -635,15 +664,16 @@ Text Font and Size:-
             font-size: 24px;
             text-tranform: uppercase;
         }
-        
+
         <!-- This will set the followig:- -->
         <!-- Font family to Arial -->
         <!-- Font weight to bold -->
         <!-- Font size to 24px -->
         <!-- Text transform to uppercase -->
-        <!-- This will change the font of all h1 elements to Arial with bold and 24px size -->
-        
-----------------------------------------------------------------------------------------
+        <!-- This will change the font of all h1 elements to Arial with bold and
+            24px size -->
+
+---------------------------------------------------------------------------------------------
 Box Model :-
     * The box model is a way to represent the structure of an HTML element.
     * It consists of the following parts:
@@ -669,11 +699,12 @@ Box Model :-
             margin: 20px;
         }
 
-        <!-- This will create a div with width of 200px, height of 100px, padding of 10px, border of 5px and margin of 20px -->
+        <!-- This will create a div with width of 200px, height of 100px, padding of
+            10px, border of 5px and margin of 20px -->
         <!-- The total width of the div will be 200px + 10px + 5px + 20px = 235px -->
         <!-- The total height of the div will be 100px + 10px + 5px + 20px = 135px -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Types of elements:-
     1. Block-level elements:-
         * These elements take up the full width of their parent element.
@@ -700,7 +731,7 @@ Types of elements:-
 
             <!-- This will create a span with a link -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Display Block:-
     * The display block property is used to make an element a block-level element.
     * It is used to make an element take up the full width of its parent element.
@@ -712,25 +743,235 @@ Display Block:-
 
         <!-- This will make the div a block-level element -->
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+*********************************************************************************************
 
 
-----------------------------------------------------------------------------------------
+                                            Week 3
 
 
-----------------------------------------------------------------------------------------
+*********************************************************************************************
+---------------------------------------------------------------------------------------------
+Bootstrap:-
+    * Bootstrap is a front-end framework for developing responsive and mobile-first
+        websites.
+    * It is a free and open-source front-end framework for developing responsive websites.
+    * It is a CSS framework that provides a set of CSS classes and JavaScript
+        components for building responsive websites.
+    * It is a front-end framework that provides a set of tools and libraries for
+        building responsive websites.
+    Ex:-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/
+            4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/
+            umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/
+            bootstrap.min.js"></script>
+
+        <!-- This will link the bootstrap CSS and JS files to the HTML document -->
+
+---------------------------------------------------------------------------------------------
+Package Manager:-
+    * A package manager is a tool that is used to manage the dependencies of a project.
+    * It is used to install, update, and remove packages from a project.
+    * It is used to manage the dependencies of a project.
+
+    Ex:-
+        npm install package-name
+        yarn add package-name
+
+        <!-- This will install the package in the project -->
+
+    Ex:- Node, npm, yarn, etc.
+        * Node is a JavaScript runtime that is used to run JavaScript code outside
+            of the browser.
+        * npm & yarn is a package manager for Node.js that is used to manage the
+            dependencies of a project.
+
+---------------------------------------------------------------------------------------------
+Static conent vs Generative Content
+    * Static content is content that does not change.
+        Ex:-
+            <h1>Heading 1</h1>
+            <p>Paragraph</p>
+
+            <!-- This is static content -->
+
+    * Generative content is content that changes based on user input or other
+        factors.
+        Ex:-
+            <h1 id="heading">Heading 1</h1>
+            <p id="paragraph">Paragraph</p>
+
+            <!-- This is generative content -->
+
+        var heading = document.getElementById("heading");
+        heading.innerHTML = "New Heading";
+
+        <!-- This will change the heading to "New Heading" -->
+
+---------------------------------------------------------------------------------------------
+Caching:-
+    * Caching is a technique used to store frequently accessed data in memory
+        to improve performance.
+    * It is used to store frequently accessed data in memory to improve
+        performance.
+
+    Ex:-
+        i. Redis
+        ii. Memcached
+
+---------------------------------------------------------------------------------------------
+Responsive Design;-
+    * Responsive design is a design approach that aims to create websites that provide an optimal viewing experience across a wide range of devices.
+
+    Ex:-
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        <!-- This will change the background color of the body to light blue when
+            the screen width is less than 600px -->
+
+---------------------------------------------------------------------------------------------
+Types of grids:-
+    1. Fixed grid:-
+        * A fixed grid is a grid that has a fixed width and height.
+        * It is used to create a fixed layout for a website.
+
+    2. Fluid grid:-
+        * A fluid grid is a grid that has a fluid width and height.
+        * It is used to create a fluid layout for a website.
+
+    3. Hybrid grid:-
+        * A hybrid grid is a grid that has a fixed width and a fluid height.
+        * It is used to create a hybrid layout for a website.
+
+---------------------------------------------------------------------------------------------
+Responsive Breakpoints, Class infixes and Dimensions:-
+    * Responsive breakpoints are used to create responsive designs that adapt to
+        different screen sizes.
+    * Class infixes are used to create responsive designs that adapt to different
+        screen sizes.
+    * Dimensions are used to create responsive designs that adapt to different
+        screen sizes.
+    * The following are the responsive breakpoints, class infixes and dimensions
+        used in Bootstrap:
+        i. Extra Small breakpoints
+            * Class infix: xs
+            * Dimensions: < 576px
+
+        ii. Small breakpoints
+            * Class infix: sm
+            * Dimensions: ≥ 576px
+
+        iii. Medium breakpoints
+            * Class infix: md
+            * Dimensions: ≥ 768px
+
+        iv. Large breakpoints
+            * Class infix: lg
+            * Dimensions: ≥ 992px
+
+        v. Extra Large breakpoints
+            * Class infix: xl
+            * Dimensions: ≥ 1200px
+
+        vi. Extra Extra Large breakpoints
+            * Class infix: xxl
+            * Dimensions: ≥ 1400px
+
+---------------------------------------------------------------------------------------------
+Modifiers in Bootstrap:-
+    i. Primary:-
+    ii. Secondary:-
+    iii. Success:-
+    iv. Danger:-
+    v. Warning:-
+    vi. Info:-
+
+---------------------------------------------------------------------------------------------
+Application Server:-
+    * An application server is a server that provides a platform for running
+        web applications.
+
+    Ex:-
+        i. Apache Tomcat
+        ii. JBoss
+        iii. GlassFish
+        iv. WebLogic
+        v. WebSphere
+
+---------------------------------------------------------------------------------------------
+Caching:-
+    * Caching is a technique used to store frequently accessed data in memory
+        to improve performance.
+    * It is used to store frequently accessed data in memory to improve
+        performance.
+
+    Ex:-
+        i. Redis
+        ii. Memcached
+
+---------------------------------------------------------------------------------------------
+Single Page Application:-
+    * A single page application (SPA) is a web application that loads a single
+        HTML page and dynamically updates the content as the user interacts with
+        the application.
+    * It is a web application that loads a single HTML page and dynamically
+        updates the content as the user interacts with the application.
+
+    Ex:-
+        i. React
+        ii. Angular
+        iii. Vue.js
+
+---------------------------------------------------------------------------------------------
 
 
-----------------------------------------------------------------------------------------
+                                            React
 
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+React:-
+    * React is a JavaScript library for building user interfaces.
+    * It is used to build single-page applications and mobile applications.
+    * It is a declarative, efficient, and flexible JavaScript library for building
+        user interfaces.
+    * It allows developers to create reusable UI components.
 
+---------------------------------------------------------------------------------------------
+The virtual DOM:-
+    * It is a lightweight representation of the actual DOM that is used to
+        improve the performance of React applications.
+    * It is used to improve the performance of React applications by reducing
+        the number of updates to the actual DOM.
 
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+How the virtual DOMs are updated in React?
+    1. The virtual DOM is compared to the actual DOM to determine which parts of the
+        actual DOM need to be updated.
+    2. The changed elements are updated in the browser DOM.
+    3. THe displayed webpages updates to match the browser DOM.
+    4. The virtual DOM is updated to match the browser DOM.
 
+---------------------------------------------------------------------------------------------
+Component Hieracrcy in React:-
+    * The component hierarchy in React is a tree-like structure that represents the
+        relationship between components in a React application.
+    * It is used to represent the relationship between components in a React
+        application.
 
-----------------------------------------------------------------------------------------
+    Ex:-
+        App
+        ├── Header
+        ├── Main
+        │   ├── Sidebar
+        │   └── Content
+        └── Footer
 
-
-----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
