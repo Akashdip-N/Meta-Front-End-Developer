@@ -1,0 +1,440 @@
+---------------------------------------------------------------------------------------------
+
+                            Programming with JavaScript
+
+---------------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 1
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
+JavaScript:-
+    * JavaScript is a high-level, interpreted programming language.
+    * It is used to code the front-end of web applications.
+    * It is a prototype-based, multi-paradigm language that supports object-oriented,
+      imperative, and functional programming styles.
+    * It is backwards compatible with its previous versions.
+
+    Alternatives to JavaScript:-
+        i. Typescript
+        ii. VBScript
+
+---------------------------------------------------------------------------------------------
+Comments in JS:-
+    // Single line comment
+    /*
+        Multi-line comment
+        Multi-line comment
+    */
+
+---------------------------------------------------------------------------------------------
+Datatypes in JS:-
+    * Number:-
+        * Represents both integer and floating-point numbers.
+        * All numbers in JavaScript are stored as 64-bit floating-point values.
+        * Example:-
+            var x = 10; // Integer
+            var y = 10.5; // Floating-point number
+
+    * String:-
+        * Represents a sequence of characters.
+        * Strings can be enclosed in single quotes (' '), double quotes (" "), or backticks (` `).
+        * Example:-
+            var str1 = 'Hello';
+            var str2 = "World";
+            var str3 = `Hello World`;
+
+    * Boolean:-
+        * Represents a logical entity and can have two values: true or false.
+        * Example:-
+            var isTrue = true;
+            var isFalse = false;
+
+    * Undefined
+        * Represents a variable that has been declared but has not yet been assigned a value.
+        * Example:-
+            var x;
+            console.log(x); // Output: undefined
+
+    * Null
+        * Represents the intentional absence of any object value.
+        * It is a primitive value that represents "nothing" or "empty".
+        * Example:-
+            var x = null;
+            console.log(x); // Output: null
+
+    * Object
+        * A collection of key-value pairs.
+        * Objects can be created using object literals, constructor functions, or the Object.create() method.
+        * Example:-
+            var person = {
+                name: 'John',
+                age: 30,
+                isStudent: false
+            };
+
+    * Symbol (ES6)
+    * BigInt (ES11)
+
+---------------------------------------------------------------------------------------------
+Operators:-
+    i. Arithmetic Operators:-
+        * + (Addition)
+        * - (Subtraction)
+        * * (Multiplication)
+        * / (Division)
+        * % (Modulus)
+        * ** (Exponentiation) [ES6]
+        * ++ (Increment)
+        * -- (Decrement)
+
+    ii. Assignment Operators:-
+        * = (Assignment)
+        * += (Addition Assignment)
+        * -= (Subtraction Assignment)
+        * *= (Multiplication Assignment)
+        * /= (Division Assignment)
+        * %= (Modulus Assignment)
+        * **= (Exponentiation Assignment) [ES6]
+        * &= (Bitwise AND Assignment)
+
+    iii. Comparison Operators:-
+        * == (Equal to)
+        * === (Strict Equal to)
+        * != (Not Equal to)
+        * !== (Strict Not Equal to)
+        * > (Greater than)
+        * < (Less than)
+        * >= (Greater than or equal to)
+        * <= (Less than or equal to)
+
+    iv. Logical Operators:-
+        * && (Logical AND)
+        * || (Logical OR)
+        * ! (Logical NOT)
+
+---------------------------------------------------------------------------------------------
+Conditional Statements:-
+    i. if statement:-
+        if (condition) {
+            // code to be executed if condition is true
+        }
+
+    ii. if-else statement:-
+        if (condition) {
+            // code to be executed if condition is true
+        } else {
+            // code to be executed if condition is false
+        }
+
+    iii. switch statement:-
+        switch (expression) {
+            case value1:
+                // code to be executed if expression === value1
+                break;
+            case value2:
+                // code to be executed if expression === value2
+                break;
+            default:
+                // code to be executed if expression doesn't match any case
+        }
+
+---------------------------------------------------------------------------------------------
+Loops:-
+    i. for loop:-
+        for (initialization; condition; increment/decrement) {
+            // code to be executed
+        }
+
+    ii. while loop:-
+        while (condition) {
+            // code to be executed
+        }
+
+    iii. do-while loop:-
+        do {
+            // code to be executed
+        } while (condition);
+
+    iv. for...of loop:-
+        for (const element of iterable) {
+            // code to be executed
+        }
+
+    v. for...in loop:-
+        for (const key in object) {
+            // code to be executed
+        }
+
+---------------------------------------------------------------------------------------------
+*****************************************************************************************
+
+
+                                    Week 2
+
+
+*****************************************************************************************
+---------------------------------------------------------------------------------------------
+Functions:-
+    * A function is a block of code designed to perform a particular task.
+    * Functions are executed when they are called or invoked.
+    * Functions can take parameters and return values.
+
+    i. Function Declaration:-
+        function functionName(parameters) {
+            // code to be executed
+        }
+
+    ii. Function Expression:-
+        const functionName = function(parameters) {
+            // code to be executed
+        };
+
+    iii. Arrow Function (ES6):-
+        const functionName = (parameters) => {
+            // code to be executed
+        };
+
+    iv. IIFE (Immediately Invoked Function Expression):-
+        (function() {
+            // code to be executed
+        })();
+
+---------------------------------------------------------------------------------------------
+Array:-
+    * An array is a special variable that can hold more than one value at a time.
+    * Arrays are zero-indexed, meaning the first element is at index 0.
+    * Array in js are objects with special properties and methods.
+    *** This is same as `vector` in C++ ***
+
+    i. Creating an Array:-
+        var arrayName = [element1, element2, element3];
+
+    ii. Accessing Array Elements:-
+        var firstElement = arrayName[0];
+
+    iii. Array Methods:-
+        * push() - Adds one or more elements to the end of an array.
+        * pop() - Removes the last element from an array.
+        * shift() - Removes the first element from an array.
+        * unshift() - Adds one or more elements to the beginning of an array.
+        * splice() - Adds/removes elements from an array at a specified index.
+        * slice() - Returns a shallow copy of a portion of an array into a new array.
+
+---------------------------------------------------------------------------------------------
+Objects in js:-
+    * An object is a collection of properties, where each property is defined as a key-value pair.
+    * Objects can be created using object literals, constructor functions, or the Object.create() method.
+
+    i. Creating an Object:-
+        var objectName = {
+            key1: value1,
+            key2: value2,
+            key3: value3
+        };
+
+    ii. Accessing Object Properties:-
+        var value = objectName.key1; // Dot notation
+        var value = objectName['key1']; // Bracket notation
+
+    iii. Object Methods:-
+        * Object.keys() - Returns an array of a given object's own enumerable property names.
+        * Object.values() - Returns an array of a given object's own enumerable property values.
+        * Object.entries() - Returns an array of a given object's own enumerable string-keyed property [key, value] pairs.
+
+    Ex:-
+        var person = {
+            name: 'John',
+            age: 30,
+            greet: function() {
+                console.log('Hello, ' + this.name);
+            }
+        };
+
+        person.greet(); // Output: Hello, John
+---------------------------------------------------------------------------------------------
+Math object:-
+    * The Math object is a built-in object that provides properties and methods for mathematical constants and functions.
+    * It is not a function object, but it is a static object.
+
+    i. Properties:-
+        * Math.PI - The value of π (pi).
+        * Math.E - The value of Euler's number (e).
+
+    ii. Methods:-
+        * Math.abs(x) - Returns the absolute value of x.
+        * Math.ceil(x) - Returns the smallest integer greater than or equal to x.
+        * Math.floor(x) - Returns the largest integer less than or equal to x.
+        * Math.round(x) - Rounds x to the nearest integer.
+        * Math.max(x, y, z, ...) - Returns the largest of zero or more numbers.
+        * Math.min(x, y, z, ...) - Returns the smallest of zero or more numbers.
+        * Math.random() - Returns a pseudo-random number between 0 and 1.
+
+    Ex:-
+        // Random number between 0 and 99
+        var randomNum = Math.floor(Math.random() * 100);
+        console.log(randomNum);
+---------------------------------------------------------------------------------------------
+String operations:-
+    * Strings are immutable in JavaScript, meaning they cannot be changed after they are created.
+    * String methods do not modify the original string but return a new string.
+
+    i. String Methods:-
+        * length - Returns the length of the string.
+        * charAt(index) - Returns the character at the specified index.
+        * indexOf(substring) - Returns the index of the first occurrence of a substring.
+        * lastIndexOf(substring) - Returns the index of the last occurrence of a substring.
+        * slice(start, end) - Extracts a section of a string and returns it as a new string.
+        * substring(start, end) - Returns a portion of the string between two specified indices.
+        * toUpperCase() - Converts the string to uppercase letters.
+        * toLowerCase() - Converts the string to lowercase letters.
+        * trim() - Removes whitespace from both ends of a string.
+        * split(separator) - Splits a string into an array of substrings.
+        * concat(str1, str2, ...) - Joins two or more strings and returns a new string.
+        * match(string) - Searches a string for a match against a regular expression and returns the matches.
+
+    Ex:-
+        var str = '  Hello World  ';
+        var str1 = ' Good Morning ';
+        console.log(str.length); // Output: 14
+        console.log(str.charAt(0)); // Output: ' '
+        console.log(str.indexOf('World')); // Output: 8
+        console.log(str.lastIndexOf('o')); // Output: 10
+        console.log(str.slice(2, 7)); // Output: 'Hello'
+        console.log(str.substring(2, 7)); // Output: 'Hello'
+        console.log(str.toUpperCase()); // Output: '  HELLO WORLD  '
+        console.log(str.toLowerCase()); // Output: '  hello world  '
+        console.log(str.trim()); // Output: 'Hello World'
+        console.log(str.split(' ')); // Output: ['  Hello', 'World  ']
+        console.log(str.concat(str1)); // Output: '  Hello World  Good Morning '
+        console.log(str.match(/o/g)); // Output: ['o', 'o']
+
+---------------------------------------------------------------------------------------------
+Typeof operator:-
+    * The typeof operator is used to determine the type of a variable or expression.
+    * It returns a string indicating the type of the unevaluated operand.
+
+    i. Syntax:-
+        typeof operand
+
+    ii. Possible return values:-
+        * "undefined" - The variable has not been assigned a value.
+        * "object" - The variable is an object (including arrays and null).
+        * "boolean" - The variable is a boolean value (true or false).
+        * "number" - The variable is a number (integer or floating-point).
+        * "string" - The variable is a string.
+        * "function" - The variable is a function.
+        * "symbol" - The variable is a symbol (ES6).
+        * "bigint" - The variable is a BigInt (ES11).
+
+    Ex:-
+        var x;
+        console.log(typeof x); // Output: 'undefined'
+        var y = null;
+        console.log(typeof y); // Output: 'object'
+        var z = 10;
+        console.log(typeof z); // Output: 'number'
+
+---------------------------------------------------------------------------------------------
+Errors:-
+    * Errors are problems that occur during the execution of a program.
+    * JavaScript has built-in error objects that provide information about the error.
+
+    i. Types of Errors:-
+        * SyntaxError - Occurs when there is a syntax error in the code.
+        * ReferenceError - Occurs when a variable is not defined.
+        * TypeError - Occurs when a value is not of the expected type.
+        * RangeError - Occurs when a number is outside the allowable range.
+        * EvalError - Occurs when the eval() function is used incorrectly.
+
+    ii. Handling Errors:-
+        * try...catch statement:-
+            try {
+                // code that may throw an error
+            } catch (error) {
+                // code to handle the error
+            }
+
+        * finally block:-
+            The finally block will execute after try and catch, regardless of whether an error occurred or not.
+
+---------------------------------------------------------------------------------------------
+Try catch block:-
+    * The try...catch statement is used to handle exceptions in JavaScript.
+    * It allows you to test a block of code for errors and handle them gracefully.
+
+    i. Syntax:-
+        try {
+            // code that may throw an error
+        } catch (error) {
+            // code to handle the error
+        } finally {
+            // code that will always execute
+        }
+
+    ii. Example:-
+        try {
+            var x = 10;
+            var y = 0;
+            var result = x / y; // This will throw an error
+        } catch (error) {
+            console.log('Error occurred: ' + error.message);
+        } finally {
+            console.log('This will always execute.');
+        }
+
+---------------------------------------------------------------------------------------------
+Empty Values in js:-
+    * In JavaScript, there are several ways to represent "empty" or "no value":
+        i. Undefined: A variable that has been declared but has not yet been assigned a value.
+        ii. Null: An intentional absence of any object value.
+        iii. NaN: Represents a value that is "Not-a-Number".
+        iv. Empty String: A string with no characters (i.e., "").
+
+    Ex:-
+        var x; // undefined
+        var y = null; // null
+        var z = NaN; // Not-a-Number
+        var str = ""; // empty string
+
+---------------------------------------------------------------------------------------------
+**********************************************************************************************
+
+                                    Week 3
+
+
+**********************************************************************************************
+---------------------------------------------------------------------------------------------
+Recursive function:-
+    * A recursive function is a function that calls itself in order to solve a problem.
+    * It must have a base case to terminate the recursion and prevent infinite loops.
+
+    i. Example:-
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1; // Base case
+            }
+            return n * factorial(n - 1); // Recursive case
+        }
+
+        console.log(factorial(5)); // Output: 120
+
+---------------------------------------------------------------------------------------------
+Scope in js:-
+    * Scope refers to the visibility of variables in different parts of the code.
+    * There are two types of scope in JavaScript: global scope and local scope.
+
+    i. Global Scope:-
+        * Variables declared outside of any function or block have global scope.
+        * They can be accessed from anywhere in the code.
+
+    ii. Local Scope:-
+        * Variables declared inside a function or block have local scope.
+        * They can only be accessed within that function or block.
+
+    iii. Block Scope (ES6):-
+        * Variables declared with let and const have block scope.
+        * They are only accessible within the block they are defined in.
+
+---------------------------------------------------------------------------------------------
