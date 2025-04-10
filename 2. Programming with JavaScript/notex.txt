@@ -67,6 +67,7 @@ Datatypes in JS:-
     * Object
         * A collection of key-value pairs.
         * Objects can be created using object literals, constructor functions, or the Object.create() method.
+        * This is what is also know as `JSON`, i.e. `JavaScript Object Notation`.
         * Example:-
             var person = {
                 name: 'John',
@@ -436,5 +437,396 @@ Scope in js:-
     iii. Block Scope (ES6):-
         * Variables declared with let and const have block scope.
         * They are only accessible within the block they are defined in.
+
+---------------------------------------------------------------------------------------------
+Var, let & const:-
+    * var:-
+        * Declares a variable that can be re-assigned.
+        * Has function scope or global scope.
+        * Can be hoisted (declared before its actual declaration).
+
+    * let:-
+        * Declares a block-scoped variable that can be re-assigned.
+        * Cannot be hoisted.
+
+    * const:-
+        * Declares a block-scoped variable that cannot be re-assigned.
+        * Must be initialized at the time of declaration.
+        * Cannot be hoisted.
+
+    Ex:-
+        var x = 10;
+        let y = 20;
+        const z = 30;
+
+        x = 15; // Allowed
+        y = 25; // Allowed
+        // z = 35; // Not allowed
+
+---------------------------------------------------------------------------------------------
+Object Oriented Programming (OOP):-
+    * OOP is a programming paradigm based on the concept of "objects", which can contain data and methods.
+    * JavaScript is a prototype-based language, meaning it uses prototypes instead of classes for inheritance.
+
+    i. Classes (ES6):-
+        * A class is a blueprint for creating objects.
+        * It can contain properties and methods.
+
+        class ClassName {
+            constructor(parameters) {
+                // constructor code
+            }
+            methodName() {
+                // method code
+            }
+        }
+
+    ii. Inheritance:-
+        * Inheritance allows one class to inherit properties and methods from another class.
+        * It is achieved using the extends keyword.
+
+        class ChildClass extends ParentClass {
+            // child class code
+        }
+
+    iii. Encapsulation:-
+        * Encapsulation is the bundling of data and methods that operate on that data within one unit (class).
+        * It restricts direct access to some components and can prevent the accidental modification of data.
+
+    iv. Polymorphism:-
+        * Polymorphism allows objects of different classes to be treated as objects of a common superclass.
+        * It is achieved through method overriding and method overloading.
+
+    Ex:-
+        var person = {
+            name: 'John',
+            age: 30,
+            greet: function() {
+                console.log('Hello, ' + this.name);
+            }
+        };
+
+        person.greet(); // Output: Hello, John
+
+---------------------------------------------------------------------------------------------
+Class in js:-
+    * A class is a blueprint for creating objects with shared properties and methods.
+
+    Ex:-
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                console.log('Hello, ' + this.name);
+            }
+        }
+
+        const person1 = new Person('John', 30);
+        person1.greet(); // Output: Hello, John
+
+---------------------------------------------------------------------------------------------
+Built in Classes in js:-
+    i. new Date():-
+        * The Date object is used to work with dates and times.
+        * It can be created using the new Date() constructor.
+
+        Ex:-
+            var date = new Date();
+            console.log(date); // Output: Current date and time
+
+    ii. new Error():-
+        * The Error object is used to create custom error messages.
+        * It can be created using the new Error() constructor.
+
+        Ex:-
+            var error = new Error('This is a custom error message');
+            console.log(error.message); // Output: This is a custom error message
+
+    iii. new Map():-
+        * The Map object is a collection of key-value pairs.
+        * It can be created using the new Map() constructor.
+
+        Ex:-
+            var map = new Map();
+            map.set('key1', 'value1');
+            map.set('key2', 'value2');
+            console.log(map.get('key1')); // Output: value1
+
+---------------------------------------------------------------------------------------------
+Inheritance:-
+    * Inheritance is a mechanism in OOP that allows one class to inherit properties and methods from another class.
+    * In JavaScript, inheritance is achieved using the prototype chain.
+
+    i. Prototypal Inheritance:-
+        * Every object in JavaScript has a prototype object from which it can inherit properties and methods.
+        * The prototype chain is used to look up properties and methods.
+
+    ii. Example:-
+        var bird = {
+            wings: true,
+            canFly: true,
+            feathers: true
+        };
+
+        var eagle = Object.create(bird);
+        console.log("Eagle: ", eagle); // Output: Eagle:  { }
+
+        var eagle2 = Object.create(bird);
+        console.log("Eagle2 has wings: ", eagle2.wings); // Output: Eagle2 has wings:  true
+
+---------------------------------------------------------------------------------------------
+Destructing in js:-
+    * Destructuring is a syntax that allows unpacking values from arrays or properties from objects into distinct variables.
+
+    i. Array Destructuring:-
+        var arr = [1, 2, 3];
+        var [a, b, c] = arr;
+        console.log(a); // Output: 1
+        console.log(b); // Output: 2
+        console.log(c); // Output: 3
+
+    ii. Object Destructuring:-
+        var obj = { x: 10, y: 20 };
+        var { x, y } = obj;
+        console.log(x); // Output: 10
+        console.log(y); // Output: 20
+
+---------------------------------------------------------------------------------------------
+For of loop:-
+    * The for...of loop is used to iterate over iterable objects (like arrays, strings, maps, sets, etc.).
+    * It provides a simpler way to loop through elements without needing an index.
+
+    i. Syntax:-
+        for (const element of iterable) {
+            // code to be executed
+        }
+
+    ii. Example:-
+        var arr = [1, 2, 3];
+        for (const num of arr) {
+            console.log(num); // Output: 1, 2, 3
+        }
+
+---------------------------------------------------------------------------------------------
+For in loop:-
+    * The for...in loop is used to iterate over the enumerable properties of an object.
+    * It provides a way to loop through the keys of an object.
+
+    i. Syntax:-
+        for (const key in object) {
+            // code to be executed
+        }
+
+    ii. Example:-
+        var obj = { a: 1, b: 2, c: 3 };
+        for (const key in obj) {
+            console.log(key + ': ' + obj[key]); // Output: a: 1, b: 2, c: 3
+        }
+
+---------------------------------------------------------------------------------------------
+Template Literatls:-
+    * Template literals are string literals that allow embedded expressions.
+    * They are enclosed by backticks (``) instead of single or double quotes.
+
+    i. Syntax:-
+        `string text ${expression} string text`
+
+    ii. Example:-
+        var name = 'John';
+        var greeting = `Hello, ${name}!`;
+        console.log(greeting); // Output: Hello, John!
+
+---------------------------------------------------------------------------------------------
+Data Structures in js:-
+    * JavaScript provides several built-in data structures for storing and manipulating data.
+
+    i. Array:-
+        * An array is a collection of elements that can be accessed by index.
+        * It is a zero-indexed, ordered list of values.
+        Ex:-
+            var arr = [1, 2, 3, 4, 5];
+            console.log(arr[0]); // Output: 1
+
+    ii. Object:-
+        * An object is a collection of key-value pairs.
+        * It is used to store related data and functions.
+        Ex:-
+            var obj = { name: 'John', age: 30 };
+            console.log(obj.name); // Output: John
+
+    iii. Set (ES6):-
+        * A set is a collection of unique values.
+        * It can store any type of value, including objects and arrays.
+        * It does not allow duplicate values.
+        Ex:-
+            var set = new Set([1, 2, 3, 4, 5]);
+            set.add(6);
+            console.log(set); // Output: Set { 1, 2, 3, 4, 5, 6 }
+
+    iv. Map (ES6):-
+        * A map is a collection of key-value pairs where keys can be of any type.
+        * It maintains the insertion order of keys.
+        Ex:-
+            var map = new Map();
+            map.set('key1', 'value1');
+            map.set('key2', 'value2');
+            console.log(map.get('key1')); // Output: value1
+
+---------------------------------------------------------------------------------------------
+Spead Operator:-
+    * The spread operator (...) is used to expand an iterable (like an array) into its individual elements.
+    * It can be used in function calls, array literals, and object literals.
+
+    i. Syntax:-
+        ...iterable
+
+    ii. Example:-
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        var combined = [...arr1, ...arr2];
+        console.log(combined); // Output: [1, 2, 3, 4, 5, 6]
+
+---------------------------------------------------------------------------------------------
+JS modules:-
+    * JavaScript modules are reusable pieces of code that can be exported from one module and imported into another.
+    * They help in organizing code and avoiding global scope pollution.
+
+    i. Exporting a Module:-
+        export const variableName = value;
+        export function functionName() {
+            // code
+        }
+
+    ii. Importing a Module:-
+        import { variableName, functionName } from './module.js';
+
+    iii. Default Export:-
+        export default functionName;
+
+    iv. Importing Default Export:-
+        import functionName from './module.js';
+
+---------------------------------------------------------------------------------------------
+Js DOM:-
+    * The Document Object Model (DOM) is a programming interface for web documents.
+    * It represents the structure of a document as a tree of objects, allowing JavaScript to manipulate the content and structure of web pages.
+
+    i. Selecting Elements:-
+        * document.getElementById('id') - Selects an element by its ID.
+        * document.getElementsByClassName('class') - Selects elements by their class name.
+        * document.querySelector('selector') - Selects the first element that matches the CSS selector.
+        * document.querySelectorAll('selector') - Selects all elements that match the CSS selector.
+
+    ii. Manipulating Elements:-
+        * element.innerHTML - Gets or sets the HTML content of an element.
+        * element.style - Gets or sets the inline styles of an element.
+        * element.setAttribute('attribute', 'value') - Sets an attribute on an element.
+        * element.classList.add('class') - Adds a class to an element.
+        * element.classList.remove('class') - Removes a class from an element.
+
+    iii. Event Handling:-
+        * element.addEventListener('event', function) - Attaches an event handler to an element.
+        * event.preventDefault() - Prevents the default action of an event.
+
+---------------------------------------------------------------------------------------------
+Js Selectors:-
+    i. document.querySelector('selector'):-
+        * Selects the first element that matches the specified CSS selector.
+        * Example:-
+            var element = document.querySelector('.className');
+
+    ii. document.querySelectorAll('selector'):-
+        * Selects all elements that match the specified CSS selector.
+        * Returns a NodeList of elements.
+        * Example:-
+            var elements = document.querySelectorAll('.className');
+
+    iii. document.getElementById('id'):-
+        * Selects an element by its ID.
+        * Example:-
+            var element = document.getElementById('elementId');
+
+    iv. document.getElementsByClassName('className'):-
+        * Selects all elements with the specified class name.
+        * Returns an HTMLCollection of elements.
+        * Example:-
+            var elements = document.getElementsByClassName('className');
+
+    v. document.getElementsByTagName('tagName'):-
+        * Selects all elements with the specified tag name.
+        * Returns an HTMLCollection of elements.
+        * Example:-
+            var elements = document.getElementsByTagName('div');
+
+---------------------------------------------------------------------------------------------
+Event Handler:-
+    * An event handler is a function that is executed when a specific event occurs on an element.
+    * JavaScript provides several ways to attach event handlers to elements.
+
+    i. Inline Event Handlers:-
+        * You can add an event handler directly in the HTML element using attributes like onclick, onmouseover, etc.
+        * Example:-
+            <button onclick="alert('Button clicked!')">Click me</button>
+
+    ii. addEventListener(type, function):-
+        * The addEventListener() method allows you to attach an event handler to an element.
+        * It can be used to listen for multiple events on the same element.
+        * Example:-
+            var button = document.querySelector('button');
+            button.addEventListener('click', function() {
+                alert('Button clicked!');
+            });
+
+    iii. removeEventListener():-
+        * The removeEventListener() method removes an event handler that was previously attached using addEventListener().
+        * Example:-
+            button.removeEventListener('click', function);
+
+---------------------------------------------------------------------------------------------
+Capturing Input:-
+    * Using the function named `prompt()`, we can capture input from the user.
+    * The prompt() function displays a dialog box that prompts the user for input.
+    * It returns the input value as a `string` or null if the user cancels the prompt.
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
 
 ---------------------------------------------------------------------------------------------
