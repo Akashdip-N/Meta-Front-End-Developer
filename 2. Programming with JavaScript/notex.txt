@@ -446,7 +446,8 @@ Var, let & const:-
         * Can be hoisted (declared before its actual declaration).
 
     * let:-
-        * Declares a block-scoped variable that can be re-assigned.
+        * Declares a block-scoped variable.
+        * That can be re-assigned.
         * Cannot be hoisted.
 
     * const:-
@@ -791,42 +792,42 @@ Capturing Input:-
     * It returns the input value as a `string` or null if the user cancels the prompt.
 
 ---------------------------------------------------------------------------------------------
+JSON file type:-
+    * JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write.
+    * It is also easy for machines to parse and generate.
+    * JSON is language-independent but uses conventions that are familiar to programmers of the C family of languages.
 
+    i. JSON Syntax:-
+        * Data is represented as key-value pairs.
+        * Keys must be strings enclosed in double quotes.
+        * Values can be strings, numbers, objects, arrays, booleans, or null.
 
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
+    ii. Example:-
+        {
+            "name": "John",
+            "age": 30,
+            "isStudent": false,
+            "courses": ["Math", "Science"],
+            "address": {
+                "city": "New York",
+                "zip": "10001"
+            }
+        }
 
 ---------------------------------------------------------------------------------------------
+JSON functions in js are:-
+    i. JSON.parse():-
+        * Converts a JSON string into a JavaScript object.
+        * Example:-
+            var jsonString = '{"name": "John", "age": 30}';
+            var jsonObject = JSON.parse(jsonString);
+            console.log(jsonObject.name); // Output: John
 
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
+    ii. JSON.stringify():-
+        * Converts a JavaScript object into a JSON string.
+        * Example:-
+            var jsonObject = { name: 'John', age: 30 };
+            var jsonString = JSON.stringify(jsonObject);
+            console.log(jsonString); // Output: {"name":"John","age":30}
 
 ---------------------------------------------------------------------------------------------
