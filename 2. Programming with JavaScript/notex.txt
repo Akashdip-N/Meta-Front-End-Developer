@@ -831,3 +831,137 @@ JSON functions in js are:-
             console.log(jsonString); // Output: {"name":"John","age":30}
 
 ---------------------------------------------------------------------------------------------
+********************************************************************************************
+
+
+                                    Week 4
+
+
+********************************************************************************************
+---------------------------------------------------------------------------------------------
+Node js:-
+    * It is a standalone JavaScript runtime environment that      allows you to run JavaScript code outside of a web browser.
+    * It is built on the V8 JavaScript engine, which is used in Google Chrome.
+    * It can be used to build server-side applications, command-line tools, and more.
+
+---------------------------------------------------------------------------------------------
+JEST:-
+    * Jest is a JavaScript testing framework developed by Facebook.
+    * It is used for testing JavaScript code, including React applications.
+    * It provides a simple and easy-to-use API for writing tests.
+
+    i. Installation:-
+        * You can install Jest using npm or yarn.
+        * Example:-
+            npm install --save-dev jest
+
+    ii. Writing Tests:-
+        * Tests are written in files with the .test.js or .spec.js extension.
+        * You can use the test() or it() function to define a test case.
+        * You can use the expect() function to make assertions about the code being tested.
+
+    iii. Running Tests:-
+        * You can run tests using the command line.
+        * Example:-
+            npx jest
+
+    iv. Example:-
+        let a = "ABCD";
+        let b = "EFGH";
+        expect(concat(a, b)).toBe("ABCDEFGH");
+
+---------------------------------------------------------------------------------------------
+Refactoring:-
+    * Refactoring is the process of restructuring existing code without changing its external behavior.
+    * It is done to improve the design, structure, and readability of the code.
+    * It can also help in reducing complexity and improving performance.
+
+    i. Techniques:-
+        * Extract Function: Break down large functions into smaller, more manageable functions.
+        * Rename Variables: Use meaningful names for variables to improve readability.
+        * Remove Dead Code: Eliminate unused or unnecessary code.
+        * Simplify Conditionals: Use simpler expressions and avoid nested conditionals.
+
+    ii. Example:-
+        function calculateArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        // Refactored
+        function calculateCircleArea(radius) {
+            return Math.PI * Math.pow(radius, 2);
+        }
+
+---------------------------------------------------------------------------------------------
+TDD:-
+    * Test-Driven Development (TDD) is a software development process that relies on the repetition of a very short development cycle.
+    * It is based on the idea of writing tests before writing the actual code.
+    * The process involves writing a test case, running it to see it fail, writing the minimum code to pass the test, and then refactoring the code.
+
+    i. Steps:-
+        1. Write a failing test case.
+        2. Run the test case to see it fail.
+        3. Write the minimum code to pass the test.
+        4. Run the test case to see it pass.
+        5. Refactor the code for better design and readability.
+
+    ii. Example:-
+        function add(a, b) {
+            return a + b;
+        }
+
+        // Test case
+        test('adds 1 + 2 to equal 3', () => {
+            expect(add(1, 2)).toBe(3);
+        });
+
+---------------------------------------------------------------------------------------------
+Types of testing:-
+    i. Unit Testing:-
+        * Tests individual components or functions in isolation.
+        * It ensures that each part of the code works as expected.
+
+    ii. Integration Testing:-
+        * Tests the interaction between different components or modules.
+        * It ensures that the components work together as intended.
+
+    iii. Functional Testing:-
+        * Tests the functionality of the application against the requirements.
+        * It ensures that the application behaves as expected.
+
+    iv. End-to-End Testing:-
+        * Tests the entire application from start to finish.
+        * It simulates real user scenarios to ensure the application works as intended.
+        * This can be done by someone who is not a developer.
+
+    v. Regression Testing:-
+        * Tests the application after changes or updates to ensure that existing functionality is not broken.
+        * It ensures that new changes do not introduce new bugs.
+
+---------------------------------------------------------------------------------------------
+Mocking:-
+    * Mocking is the process of creating a simulated version of an object or function for testing purposes.
+    * It allows you to isolate the code being tested and control its behavior.
+
+    i. Example:-
+        const mockFunction = jest.fn();
+        mockFunction.mockReturnValue('mocked value');
+        expect(mockFunction()).toBe('mocked value');
+
+    ii. Use Cases:-
+        * Mocking external dependencies (like APIs) to avoid network calls during testing.
+        * Controlling the behavior of functions to test different scenarios.
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
