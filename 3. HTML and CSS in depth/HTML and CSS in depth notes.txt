@@ -1,0 +1,708 @@
+---------------------------------------------------------------------------------------------
+
+                            HTML and CSS in depth notes
+
+---------------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 1
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
+HTML:-
+    * Hypertext Markup Language,
+        Hypertext: text with links
+        Markup: a system for annotating a document in a way that is syntactically distinguishable from the text
+
+---------------------------------------------------------------------------------------------
+Article ELement
+    * The <article> element represents a self-contained composition in a document, page, application, or site,
+        that is intended to be independently distributable or reusable (e.g., in syndication).
+    * Examples of articles include: forum post, magazine or newspaper article, blog entry, user-submitted comment,
+        or any other independent item of content.
+    * The <article> element can be used as a child of the <body> element or as a child of the <section> element.
+    * The <article> element must have a heading (e.g., an <h1>, <h2>, etc.) as its first child.
+    Ex:-
+        <article>
+            <h1>Article Title</h1>
+            <p>This is the content of the article.</p>
+        </article>
+
+        -----------------------------------------------
+        The output will be something like this:-
+        Article Title
+        This is the content of the article.
+
+---------------------------------------------------------------------------------------------
+Nav tag:-
+    * The <nav> element represents a section of a page that links to other pages or to parts within the page.
+    * The <nav> element is intended for navigation links, such as menus, tables of contents, and indexes.
+    * The <nav> element can be used as a child of the <body> element or as a child of the <header>, <footer>, or <aside> elements.
+
+    Ex:-
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        -----------------------------------------------
+        The output will be something like this:-
+        Home
+        About
+        Contact
+
+---------------------------------------------------------------------------------------------
+Footer Tag:-
+    * The <footer> element represents a footer for its nearest sectioning content or sectioning root element.
+    * This element typically contains information about the author of the section, copyright information, links to related documents, etc.
+
+---------------------------------------------------------------------------------------------
+Section tag:-
+    * The <section> element represents a thematic grouping of content, typically with a heading.
+    * The <section> element is intended to represent a standalone section of content that is related to the main topic of the document.
+    * The <section> element can be used as a child of the <body> element or as a child of the <article>, <aside>, or <nav> elements.
+
+    Ex:-
+        <section>
+            <h2>Section Title</h2>
+            <p>This is the content of the section.</p>
+        </section>
+
+        -----------------------------------------------
+        The output will be something like this:-
+        Section Title
+        This is the content of the section.
+
+---------------------------------------------------------------------------------------------
+Summary tag:-
+    * The <summary> element represents a summary, heading, or legend for a <details> element.
+    * The <summary> element is intended to provide a summary of the content of the <details> element.
+    * The <summary> element can be used as a child of the <details> element.
+
+    Ex:-
+        <details>
+            <summary>Details Title</summary>
+            <p>This is the content of the details.</p>
+        </details>
+
+        -----------------------------------------------
+        The output will be something like this:-
+        Details Title
+        This is the content of the details.
+
+---------------------------------------------------------------------------------------------
+Content tag:-
+    i. <blockquote> element represents a section that is quoted from another source.
+    ii. <cite> element represents the title of a work.
+    iii. <q> element represents a short inline quotation.
+    iv. <pre> element represents preformatted text, which are typically rendered in the web browser using a monospace font.
+    v. <dd> element represents a description or definition of a term.
+    vi. <figcaption> element represents a caption or legend for a <figure> element.
+    vii. <hr> this adds a horizontal line to the page.
+
+---------------------------------------------------------------------------------------------
+Differnt table tags:-
+    i. <ul>:-
+        * The <ul> element represents an unordered list of items.
+        * The <ul> element is typically used to create a `bulleted list` of items.
+
+    ii. <ol>:-
+        * The <ol> element represents an ordered list of items.
+        * The <ol> element is typically used to create a `numbered list` of items.
+
+    iii.<dl>:-
+        * The <dl> element represents a description list.
+        * The <dl> element is typically used to create a list of `terms and their definitions`.
+
+---------------------------------------------------------------------------------------------
+Metadata:-
+    * Metadata is data that provides information about other data.
+    * Metadata is typically used to describe the content, structure, and relationships of data.
+    * Metadata can be used to improve the searchability, organization, and usability of data.
+    * These are not displayed on the page, but are used by browsers and search engines to understand the content of the page.
+    * Metadata is typically included in the <head> section of an HTML document.
+
+------------------------------------------------------------------------------------------------
+Meta tag:-
+    * The <meta> tags are used to add metadata to an HTML document.
+    * The tag consists of two attributes:
+        i. name:-
+            * The name attribute specifies the name of the metadata.
+            * The name attribute is typically used to specify the type of metadata, such as "description", "keywords", "author", etc.
+        ii. content:-
+            * The content attribute specifies the value of the metadata.
+            * The content attribute is typically used to specify the value of the metadata, such as the description of the page, the keywords for search engines, etc.
+
+    Ex:-
+        i. Author metadata:- It specifies the author of the document.
+
+            Ex:- <meta name="author" content="John Doe">
+            ----------------------------------------
+            This specifies the author of the document as "John Doe".
+
+        ii. Description metadata:- It specifies the description of the document.
+
+            Ex:- <meta name="description" content="This is a sample HTML document.">
+            ----------------------------------------
+            This specifies the description of the document as "This is a sample HTML document".
+
+        iii. Keywords metadata:- It specifies the keywords for the document. THESE ARE NOW ABANDONED BY GOOGLE, FOR SEO BECAUSE OF IT'S MISUSE.
+
+            Ex:- <meta name="keywords" content="HTML, CSS, JavaScript">
+            ----------------------------------------
+            This specifies the keywords for the document as "HTML, CSS, JavaScript".
+
+        iv. Robots metadata:-
+            * It specifies the instructions for search engine robots.
+            * Types of content for robots metadata:
+                i. index:- Specifies that the page should be indexed by search engines.
+                ii. noindex:- Specifies that the page should not be indexed by search engines.
+                iii. follow:- Specifies that the links on the page should be followed by search engines.
+                iv. nofollow:- Specifies that the links on the page should not be followed by search engines.
+
+            Ex:- <meta name="robots" content="index, follow">
+            ----------------------------------------
+            This specifies the instructions for search engine robots to index the page and follow the links.
+
+        v. viewport metadata:-
+            * It specifies the viewport settings for responsive web design.
+            * The viewport is the visible area of a web page on a device.
+            * The viewport metadata is used to control the layout of the page on different devices.
+
+            Ex:- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                ----------------------------------------
+                This specifies the viewport settings for responsive web design, with a width of the device width and an initial scale of 1.0.
+
+    Other examples:-
+        * <meta name="googlebot" content=”notranslate” />
+            This specifies that the page should not be translated by Google Translate.
+
+---------------------------------------------------------------------------------------------
+HTTP-equiv:-
+    * The http-equiv attribute is used to provide HTTP headers in the HTML document.
+    * The http-equiv attribute is typically used to specify the content type, character set, and caching settings for the page.
+    * The http-equiv attribute can be used with the <meta> tag.
+
+    Ex:-
+        i. Content-Type metadata:-
+            Ex:- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            ----------------------------------------
+            This specifies the content type and character set for the page as "text/html" and "UTF-8".
+
+        ii. Refresh metadata:-
+            Ex:- <meta http-equiv="refresh" content="30">
+            ----------------------------------------
+            This specifies that the page should refresh every 30 seconds.
+
+        iii. Cache-Control metadata:-
+            Ex:- <meta http-equiv="Cache-Control" content="no-cache">
+            ----------------------------------------
+            This specifies that the page should not be cached by the browser.
+
+---------------------------------------------------------------------------------------------
+Types of layout designs:-
+    i. Top navbar layout:-
+        * The top navbar layout is a common layout design that consists of a navigation bar at the top of the page.
+        * The navigation bar typically contains links to different sections of the page or to other pages on the website.
+
+    ii. Carousel layout:-
+        * The carousel layout is a common layout design that consists of a rotating set of images or content.
+        * The carousel typically contains navigation controls to allow the user to navigate through the images or content.
+
+    iii. Blog layout:-
+        * The blog layout is a common layout design that consists of a list of blog posts or articles.
+        * The blog layout typically contains a title, author, date, and content for each blog post or article.
+
+    iv. Dashboard layout:-
+        * The dashboard layout is a common layout design that consists of a set of widgets or panels that display information.
+        * The dashboard layout typically contains navigation controls to allow the user to navigate through the widgets or panels.
+
+---------------------------------------------------------------------------------------------
+Open Graph Protocol:-
+    * The Open Graph protocol is a set of meta tags that are used to control how web pages are displayed on social media platforms.
+    * The Open Graph protocol is typically used to specify the title, description, and image for a web page when it is shared on social media.
+
+    Ex:-
+        i. Title metadata:-
+            Ex:- <meta property="og:title" content="Sample Web Page">
+            ----------------------------------------
+            This specifies the title of the web page as "Sample Web Page".
+
+        ii. Description metadata:-
+            Ex:- <meta property="og:description" content="This is a sample web page.">
+            ----------------------------------------
+            This specifies the description of the web page as "This is a sample web page".
+
+        iii. Image metadata:-
+            Ex:- <meta property="og:image" content="https://example.com/image.jpg">
+            ----------------------------------------
+            This specifies the image for the web page as "https://example.com/image.jpg".
+
+        iv. URL metadata:-
+            Ex:- <meta property="og:url" content="https://example.com">
+            ----------------------------------------
+            This specifies the URL of the web page as "https://example.com".
+
+---------------------------------------------------------------------------------------------
+HTML Forms:-
+    * HTML forms are used to collect user input and submit it to a server for processing.
+    * HTML forms consist of various form elements, such as text fields, checkboxes, radio buttons, and buttons.
+    * HTML forms can be used to create a wide variety of user interfaces, such as login forms, registration forms, and search forms.
+
+    Ex:-
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <input type="submit" value="Submit">
+        </form>
+
+        -----------------------------------------------
+        The output will be something like this:-
+        Name: [____________________]
+        [Submit]
+
+---------------------------------------------------------------------------------------------
+Form validation:-
+    * Form validation is the process of checking user input in a form to ensure that it meets certain criteria.
+    * Types of form validation:
+        i. Client-side validation:-
+            * Client-side validation is performed in the user's web browser before the form is submitted to the server.
+            * Client-side validation is typically used to provide immediate feedback to the user and to reduce server load.
+
+        ii. Server-side validation:-
+            * Server-side validation is performed on the server after the form is submitted.
+            * Server-side validation is typically used to ensure that the data is valid and secure before processing it.
+
+---------------------------------------------------------------------------------------------
+Client-side validation & it's types:-
+    i. <input type="email>
+        This will validate that the input is a valid email address.
+    ii. <input type="url>
+        This will validate that the input is a valid URL.
+    iii. <input type="tel">
+        This will validate that the input is a valid telephone number.
+    iv. <input type="number">
+        This will validate that the input is a valid number.
+    v. <input type="date">
+        This will validate that the input is a valid date.
+    vi. <input type="color">
+        This will validate that the input is a valid color.
+
+---------------------------------------------------------------------------------------------
+Input types:-
+    i. <button> element:-
+        * It represents a clickable button.
+        * It can be used to submit a form, reset a form, or perform a custom action.
+        * It can contain text, images, or other HTML elements.
+        * Example:-
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" onclick="alert('Button clicked!')">Click me!</button>
+            ----------------------------------------
+            This will create three buttons: a submit button, a reset button, and a custom button that displays an alert when clicked.
+
+    ii. Checkbox:-
+        * It represents a checkbox input.
+        * It can be used to select one or more options from a list.
+        * Example:-
+            <input type="checkbox" id="option1" name="option1" value="Option 1">
+            <label for="option1">Option 1</label>
+            <input type="checkbox" id="option2" name="option2" value="Option 2">
+            <label for="option2">Option 2</label>
+            ----------------------------------------
+            This will create two checkboxes with labels "Option 1" and "Option 2".
+
+    iii. Radio button:-
+        * It represents a radio button input.
+        * It can be used to select one option from a list.
+        * Example:-
+            <input type="radio" id="option1" name="options" value="Option 1">
+            <label for="option1">Option 1</label>
+            <input type="radio" id="option2" name="options" value="Option 2">
+            <label for="option2">Option 2</label>
+            ----------------------------------------
+            This will create two radio buttons with labels "Option 1" and "Option 2".
+
+    iv. Submit:-
+        * It represents a submit button.
+        * It can be used to submit a form.
+        * Example:-
+            <input type="submit" value="Submit">
+            ----------------------------------------
+            This will create a submit button with the label "Submit".
+
+    v. Text:-
+        * It represents a single-line text input.
+        * It can be used to enter a single line of text.
+        * Example:-
+            <input type="text" id="name" name="name">
+            ----------------------------------------
+            This will create a single-line text input with the label "Name".
+
+    vi. Password:-
+        * It represents a password input.
+        * It can be used to enter a password.
+        * Example:-
+            <input type="password" id="password" name="password">
+            ----------------------------------------
+            This will create a password input with the label "Password".
+
+    vii. Date:-
+        * It represents a date input.
+        * It can be used to enter a date.
+        * Example:-
+            <input type="date" id="date" name="date">
+            ----------------------------------------
+            This will create a date input with the label "Date".
+
+    viii. Datetime-local:-
+        * It represents a date and time input.
+        * It can be used to enter a date and time.
+        * Example:-
+            <input type="datetime-local" id="datetime" name="datetime">
+            ----------------------------------------
+            This will create a date and time input with the label "Date and Time".
+
+    ix. Email:-
+        * It represents an email input.
+        * It can be used to enter an email address.
+        * Example:-
+            <input type="email" id="email" name="email">
+            ----------------------------------------
+            This will create an email input with the label "Email".
+
+    x. File:-
+        * It represents a file input.
+        * It can be used to upload a file.
+        * Example:-
+            <input type="file" id="file" name="file">
+            ----------------------------------------
+            This will create a file input with the label "File".
+
+    xi. Hidden:-
+        * It represents a hidden input.
+        * It can be used to store data that is not visible to the user.
+        * Example:-
+            <input type="hidden" id="hidden" name="hidden" value="Hidden value">
+            ----------------------------------------
+            This will create a hidden input with the label "Hidden".
+
+    xii. Image:-
+        * It represents an image input.
+        * It can be used to upload an image.
+        * Example:-
+            <input type="image"src="submit_img.png" alt="Submit" width="48" height="48">
+            ----------------------------------------
+            This will create an image input with the label "Submit" and a width and height of 48 pixels.
+
+    xiii. Number:-
+        * It represents a number input.
+        * It can be used to enter a number.
+        * Example:-
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+            ----------------------------------------
+            This will create a number input with the label "Number".
+
+    xiv. Month:-
+        * It represents a month input.
+        * It can be used to enter a month.
+        * Example:-
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth" min="1930-01" value="2000-01">
+            ----------------------------------------
+            This will create a month input with the label "Month".
+
+---------------------------------------------------------------------------------------------
+Min & Max attributes:-
+    * The min and max attributes are used to specify the minimum and maximum values for input elements.
+    * The min and max attributes can be used with the following input types:
+        i. Number
+        ii. Range
+        iii. Date
+        iv. Time
+        v. Month
+        vi. Week
+
+    Ex:-
+        <input type="number" id="age" name="age" min="1" max="100">
+        ----------------------------------------
+        This will create a number input with a minimum value of 1 and a maximum value of 100.
+        And the name of the input is "age", which is used to identify the input when the form is submitted.
+
+---------------------------------------------------------------------------------------------
+Patterns:-
+    * The pattern attribute is used to specify a regular expression that the input value must match.
+    * The pattern attribute can be used with the following input types:
+        i. Text
+        ii. Search
+        iii. Tel
+        iv. Url
+        v. Email
+
+    Ex:-
+        <input type="tel" id="phone" name="phone" pattern=”^(?:0|\+?44)(?:\d\s?){9,10}$” >
+        ----------------------------------------
+        This will create a telephone input with a pattern that matches UK telephone numbers.
+
+---------------------------------------------------------------------------------------------
+Form sending methods:-
+    i. GET method:-
+        * This method is used to send data to the server as part of the URL.
+        * This method is typically used for retrieving data from the server.
+        * This method is `not secure`, as the data is visible in the URL.
+        **** BY DEFAULT IT IS GET METHOD, SO WE DON'T NEED TO SPECIFY IT IN THE FORM TAG. ****
+
+    ii. POST method:-
+        * This method is used to send data to the server as part of the request body.
+        * This method is typically used for submitting data to the server.
+        * This method is more secure than the GET method, as the data is not visible in the URL.
+
+---------------------------------------------------------------------------------------------
+Essential Attributes of form data sending:-
+    i. Action:-
+        * The action attribute specifies the URL to which the form data should be sent.
+        * The action attribute is typically used to specify the server-side script that will process the form data.
+
+        Ex:- <form action="www.Example.com" method="post">
+                ----------------------------------------
+                This specifies that the form data should be sent to the "www.Example.com" URL using the POST method.
+
+    ii. Method:-
+        * The method attribute specifies the HTTP method to be used when sending the form data.
+        * The method attribute can be set to either "GET" or "POST".
+
+        Ex:- <form action="submit.php" method="post">
+            ----------------------------------------
+            This specifies that the form data should be sent to the "submit.php" script using the POST method.
+
+---------------------------------------------------------------------------------------------
+Absolute & Relative path:-
+    a. Absolute Path:-
+        * An absolute path is a complete URL that specifies the location of a resource on the web.
+        * An absolute path includes the protocol (http or https), the domain name, and the path to the resource.
+
+        Ex:-
+            The URL of the main website is:- `https://meta.com`,
+
+            and the URL of the login form is:- `https://meta.com/company-info/`
+
+            and the form action is:-
+            <form action="/login" method="post">
+            ----------------------------------------
+            This specifies that the form data should be sent to the https://meta.com/login URL using the POST method.
+
+    b. Relative Path:-
+        * A relative path is a partial URL that specifies the location of a resource relative to the current page.
+        * A relative path does not include the protocol or domain name.
+
+        Ex:-
+            The URL of the main website is:- `https://meta.com`,
+
+            and the URL of the login form is:- `https://meta.com/company-info/`
+
+            and the form action is:-
+            <form action="login" method="post">
+            ----------------------------------------
+            This specifies that the form data should be sent to the https://meta.com/company-info/login URL using the POST method.
+
+---------------------------------------------------------------------------------------------
+HTML form elements:-
+    i. <input> element:-
+        * This element is used to create various types of input fields in a form.
+        * The type attribute specifies the type of input field to be created.
+        * The name attribute specifies the name of the input field, which is used to identify the input when the form is submitted.
+
+        Ex:-
+            <input type="text" id="name" name="name">
+            ----------------------------------------
+            This will create a single-line text input field with the label "Name".
+
+    ii. <textarea> element:-
+        * This element is used to create a multi-line text input field in a form.
+        * The rows and cols attributes specify the number of rows and columns for the textarea.
+
+        Ex:-
+            <textarea id="message" name="message" rows="4" cols="50">
+                This is a sample message.
+            </textarea>
+            ----------------------------------------
+            This will create a multi-line text input field with the label "Message".
+
+    iii. <select> element:-
+        * This element is used to create a drop-down list in a form.
+        * The <option> elements are used to define the options in the drop-down list.
+
+        Ex:-
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+            </select>
+            ----------------------------------------
+            This will create a drop-down list with the label "Country".
+
+    iv. <option> element:-
+            * This element is used to define an option in a drop-down list or a list of predefined options.
+            * The value attribute specifies the value of the option.
+
+            Ex:-
+                <select id="country" name="country">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                </select>
+                ----------------------------------------
+                This will create a drop-down list with the label "Country".
+
+    v. <button> element:-
+        * This element is used to create a clickable button in a form.
+        * The type attribute specifies the type of button to be created (submit, reset, or button).
+
+        Ex:-
+            <button type="submit">Submit</button>
+            ----------------------------------------
+            This will create a submit button with the label "Submit".
+
+    vi. <label> element:-
+        * This element is used to create a label for an input field in a form.
+        * The for attribute specifies the id of the input field that the label is associated with.
+
+        Ex:-
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            ----------------------------------------
+            This will create a label for the input field with the label "Name".
+
+    vii. <fieldset> element:-
+        * This element is used to group related elements in a form.
+        * It is used to create a caption for the fieldset.
+
+        Ex:-
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </fieldset>
+            ----------------------------------------
+            This will create a fieldset with the label "Personal Information" and an input field for the name.
+
+    viii. <legend> element:-
+        * This element is used to create a caption for a fieldset.
+        * It is typically used to provide a title or description for the fieldset.
+
+        Ex:-
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </fieldset>
+            ----------------------------------------
+            This will create a fieldset with the label "Personal Information" and an input field for the name.
+
+    ix. <datalist> element:-
+        * This element is used to create a list of predefined options for an input field.
+        * The <option> elements are used to define the options in the datalist.
+        * This is different from the <select> element, as it allows the user to enter a custom value in addition to selecting from the list.
+
+        Ex:-
+            <input type="text" id="name" name="name" list="names">
+            <datalist id="names">
+                <option value="John">
+                <option value="Jane">
+                <option value="Doe">
+            </datalist>
+            ----------------------------------------
+            This will create a text input field with a list of predefined options for the name.
+
+    x. <output> element:-
+        * This element is used to display the result of a calculation or user action.
+        * It is typically used in conjunction with JavaScript to display the result of a calculation.
+
+        Ex:-
+            <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="range" id="a" value="50">
+                +
+                <input type="number" id="b" value="50">
+                =
+                <output name="result" for="a b">100</output>
+            </form>
+            ----------------------------------------
+            This will create a form that displays the result of the calculation.
+
+    xi. <optgroup> element:-
+        * This element is used to group related options in a drop-down list.
+        * It is typically used to create a hierarchical structure for the options.
+
+        Ex:-
+            <select id="country" name="country">
+                <optgroup label="North America">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="UK">UK</option>
+                    <option value="France">France</option>
+                </optgroup>
+            </select>
+            ----------------------------------------
+            This will create a drop-down list with two groups of options: "North America" and "Europe".
+
+---------------------------------------------------------------------------------------------
+Audio & Video streaming:-
+    * The <audio>, <video> element is used to embed audio & video content respectively in a web page.
+    * Both elements support various attributes, such as controls, autoplay, loop, and muted.
+
+    Ex:-
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        -----------------------------------------------
+        This will create an audio player and a video player with controls.
+
+---------------------------------------------------------------------------------------------
+iFrame:-
+    * The <iframe> element is used to embed another HTML document within the current document.
+    * The src attribute specifies the URL of the document to be embedded.
+    * The width and height attributes specify the size of the iframe.
+    * This element will be used to add "microphone" and "camera" access to the page.
+
+    Ex:-
+        <iframe src="https://www.example.com" width="600" height="400"></iframe>
+
+        -----------------------------------------------
+        This will create an iframe that displays the content of "https://www.example.com".
+
+---------------------------------------------------------------------------------------------
+Sandbox:-
+    * The sandbox attribute is used to apply extra restrictions to an iframe.
+    * The sandbox attribute can be used to prevent the iframe from executing scripts, submitting forms, or accessing the parent document.
+
+    Ex:-
+        <iframe src="https://www.example.com" sandbox></iframe>
+
+        -----------------------------------------------
+        This will create an iframe with extra restrictions applied.
+
+---------------------------------------------------------------------------------------------
+GRAPHICS PORGAMMING
+    i. GIF (Graphics Interchange Format):-
+        * GIF is a bitmap image format that supports both animated and static images.
+        * GIF uses lossless compression, which means that the image quality is not degraded when the image is compressed.
+        * GIF supports a maximum of 256 colors, which makes it suitable for simple graphics and animations.
+
+    ii. WebGL:-
+        * WebGL is a JavaScript API that allows rendering 2D and 3D graphics in a web browser.
+        * WebGL is based on OpenGL ES, which is a subset of the OpenGL API for embedded systems.
+        * WebGL allows developers to create interactive graphics applications, such as games and simulations, using JavaScript and HTML5.
+
+---------------------------------------------------------------------------------------------
