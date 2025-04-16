@@ -706,3 +706,411 @@ GRAPHICS PORGAMMING
         * WebGL allows developers to create interactive graphics applications, such as games and simulations, using JavaScript and HTML5.
 
 ---------------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 2
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
+Flexbox:-
+    * Flexbox is a one-dimensional layout model that allows you to create flexible and responsive layouts.
+    * Flexbox is designed to distribute space along a single axis (either horizontally or vertically).
+    * Flexbox is ideal for creating layouts that require alignment, distribution, and spacing of items.
+
+    Ex:-
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        -----------------------------------------------
+        This will create a flex container that centers its items both horizontally and vertically.
+
+---------------------------------------------------------------------------------------------
+Different flexbox properties:-
+    i. display:-
+        * The display property is used to specify the display type of an element.
+        * The display property can be set to "flex" to create a flex container.
+
+        Example:-
+            .container {
+                display: flex;
+            }
+            ----------------------------------------
+            This will create a flex container with the class "container".
+
+    ii. flex-direction:-
+        * The flex-direction property is used to specify the direction of the flex items in a flex container.
+        * The flex-direction property can be set to "row", "row-reverse", "column", or "column-reverse".
+
+        Example:-
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+            ----------------------------------------
+            This will create a flex container with the flex items arranged in a row.
+
+    iii. justify-content:-
+        * The justify-content property is used to align the flex items along the main axis of the flex container.
+        * The justify-content property can be set to "flex-start", "flex-end", "center", "space-between", or "space-around".
+
+        Example:-
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+            ----------------------------------------
+            This will create a flex container that centers its items along the main axis.
+
+    iv. align-items:-
+        * The align-items property is used to align the flex items along the cross axis of the flex container.
+        * The align-items property can be set to "flex-start", "flex-end", "center", "baseline", or "stretch".
+
+        Example:-
+            .container {
+                display: flex;
+                align-items: center;
+            }
+            ----------------------------------------
+            This will create a flex container that centers its items along the cross axis.
+
+    v. flex-wrap:-
+        * The flex-wrap property is used to specify whether the flex items should wrap onto multiple lines.
+        * The flex-wrap property can be set to "nowrap", "wrap", or "wrap-reverse".
+
+        Example:-
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            ----------------------------------------
+            This will create a flex container that allows its items to wrap onto multiple lines.
+
+    vi. align-self:-
+        * The align-self property is used to override the align-items property for a specific flex item.
+        * The align-self property can be set to "auto", "flex-start", "flex-end", "center", "baseline", or "stretch".
+
+        Example:-
+            .item {
+                align-self: center;
+            }
+            ----------------------------------------
+            This will create a flex item that is centered along the cross axis, regardless of the align-items property of the container.
+
+    vii. order:-
+        * The order property is used to specify the order of a flex item in a flex container.
+        * The order property can be set to any integer value, with lower values appearing first.
+
+        Example:-
+            .item {
+                order: 2;
+            }
+            ----------------------------------------
+            This will create a flex item with an order of 2, which will appear after items with an order of 1.
+
+    viii. flex-grow:-
+        * The flex-grow property is used to specify how much a flex item should grow relative to other items in the same container.
+        * The flex-grow property can be set to any positive integer value.
+
+        Example:-
+            .item {
+                flex-grow: 1;
+            }
+            ----------------------------------------
+            This will create a flex item that grows to fill the available space in the container.
+
+    ix. flex-shrink:-
+        * The flex-shrink property is used to specify how much a flex item should shrink relative to other items in the same container.
+        * The flex-shrink property can be set to any positive integer value.
+
+        Example:-
+            .item {
+                flex-shrink: 1;
+            }
+            ----------------------------------------
+            This will create a flex item that shrinks to fit within the container.
+
+    x. flex-basis:-
+        * The flex-basis property is used to specify the initial size of a flex item before it grows or shrinks.
+        * The flex
+
+        Example:-
+            .item {
+                flex-basis: 100px;
+            }
+            ----------------------------------------
+            This will create a flex item with an initial size of 100 pixels before it grows or shrinks.
+
+---------------------------------------------------------------------------------------------
+CSS measurements:-
+    There are two types of measurements in CSS:-
+        i. Absolute measurements:-
+            * Absolute measurements are fixed units that do not change based on the size of the viewport or the parent element.
+
+            * Examples:-
+                i. Q (Quater-Millimeter) :- 1Q = 1/40 of a centimeter.
+                ii. mm (Millimeter) :- 1mm = 1/10 of a centimeter.
+                iii. cm (Centimeter) :- 1cm = 37.8 px = 25.2/64 in
+                iv. in (Inch) :- 1in = 2.54cm or 96px.
+                v. pc (Pica) :- 1pc = 1/6 of an inch.
+                vi. pt (Point) :- 1pt = 1/72 of an inch.
+                vii. px (Pixel) :- 1px = 1/96 of an inch.
+
+        ii. Relative measurements:-
+            * Relative measurements are flexible units that change based on the size of the viewport or the parent element.
+            * They can be also used for font sizes, margins, and paddings.
+
+            * Examples
+                i. percentages (%) :- Percentage value in relation to the parent element.
+                ii. ems (em) :- `Font size` of the parent where present.
+                iii. rems (rem):- `Font size` of the root element i.e. html.
+                iv. exs (ex):- x-co-ordinate or height of the font element.
+                v. ch:- Width of the font character.
+                vi. lh :- Line height of the font element.
+                vii. rlh:- Value computed for line height of the rool element i.e. html.
+                viii. vw:- 1% of the viewport width.
+                ix. vh:- 1% of the viewport height.
+                x. vmin:- 1% of the smallest dimension of viewport.
+                xi. vmax:- 1% of the largest dimension of viewport.
+
+
+---------------------------------------------------------------------------------------------
+Use of flexbox:-
+    * Flexbox is used to create flexible and responsive layouts that can adapt to different screen sizes and orientations.
+    * Flexbox is ideal for creating layouts that require alignment, distribution, and spacing of items.
+    * Flexbox is commonly used in web design for creating navigation menus, card layouts, and grid systems.
+
+    Ex:-
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ----------------------------------------
+        This will create a flex container with the flex items arranged in a row, spaced evenly between them, and centered along the cross axis.
+
+---------------------------------------------------------------------------------------------
+Common uses of flexbox:-
+    i. Search Bar
+    ii. Naviagtion Bar
+    iii. Image galary
+
+---------------------------------------------------------------------------------------------
+Flex charts:-
+    * Flex charts are a type of chart that uses flexbox to create flexible and responsive layouts.
+    * Flex charts can be used to create various types of charts, such as bar charts, line charts, and pie charts.
+    * Flex charts are commonly used in data visualization and dashboard applications.
+
+    Ex:-
+        .chart {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        --------------------------------------------------
+        This will create a flex chart with the chart items arranged in a column, centered along the main axis and cross axis.
+
+---------------------------------------------------------------------------------------------
+Flex properties:-
+    i. Flex-grow:-
+        * The flex-grow property is used to specify how much a flex item should grow relative to other items in the same container.
+        * The flex-grow property can be set to any positive integer value.
+
+        Example:-
+            .item {
+                flex-grow: 1;
+            }
+            ----------------------------------------
+            This will create a flex item that grows to fill the available space in the container.
+
+    ii. Flex-shrink:-
+        * The flex-shrink property is used to specify how much a flex item should shrink relative to other items in the same container.
+        * The flex-shrink property can be set to any positive integer value.
+
+        Example:-
+            .item {
+                flex-shrink: 1;
+            }
+            ----------------------------------------
+            This will create a flex item that shrinks to fit within the container.
+
+    iii. Flex-basis:-
+        * The flex-basis property is used to specify the initial size of a flex item before it grows or shrinks.
+        * The flex-basis property can be set to any length value (px, em, rem, etc.) or percentage.
+
+        Example:-
+            .item {
+                flex-basis: 100px;
+            }
+            ----------------------------------------
+            This will create a flex item with an initial size of 100 pixels before it grows or shrinks.
+
+---------------------------------------------------------------------------------------------
+Flexbox cheat sheet:-
+    * Grid properties:-
+        i. grid-template-rows: none :- This will organize the elements similar to rows on a table.
+
+        ii. grid-template-columns: none :- This will organize the elements similar to columns on a table.
+
+        iii. grid-template-areas: none :- This will organize the elements similar to a table with rows and columns.
+
+        iv. grid-auto-rows: auto :- This will automatically adjust the height of the rows based on the content.
+
+        v. grid-auto-columns: auto :- This will automatically adjust the width of the columns based on the content.
+
+        vi. grid-auto-flow: row :- This will automatically arrange the elements in a row.
+
+        vii. column-gap: normal:- This will set gap between the columns.
+
+        viii. row-gap: normal:- This will set gap between the rows.
+
+    * Grid properties for container:-
+        i. grid-template-columns: measurement units | % units | repeat():-
+
+---------------------------------------------------------------------------------------------
+CSS Grid:-
+    * CSS Grid is a two-dimensional layout model that allows you to create complex and responsive layouts.
+    * CSS Grid is designed to distribute space along both the rows and columns of a grid container.
+    * CSS Grid is ideal for creating layouts that require precise control over the placement and sizing of items.
+
+    Ex:-
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        ----------------------------------------
+        This will create a grid container with three columns and two rows, with each column and row taking up an equal amount of space.
+
+---------------------------------------------------------------------------------------------
+CSS Selector:-
+    i. Attribute selector:-
+        * The attribute selector is used to select elements based on their attributes.
+        * The attribute selector can be used to select elements with a specific attribute, or elements with a specific attribute value.
+
+        The `index.html` is
+        -------------------------------------
+            <a href="https://www.example.com" target="_blank">Example</a>
+
+            <a href="https://www.example.com/somewhere" target="_self" class="Example1> Example1</a>
+
+            <a href="https://www.example.com/otherpage" target="_parent" class="Example2"> Example2 </a>
+
+        Ex:-
+            i. a[class] {
+                    color: red;
+                }
+
+                -------------------
+                This will select all <a> elements with a class attribute and set their text color to red, i.e. the second and the 3rd Link will be red.
+
+            ii. a[href*="example"] {
+                    color: blue;
+                }
+
+                -------------------
+                This will select all <a> elements with an href attribute that contains the word "example" and set their text color to blue, i.e. all 3 links will be blue.
+
+            iii. a[href="https://www.example.com"] {
+                    color: green;
+                }
+
+                -------------------
+                This will select all <a> elements with an href attribute that is equal to "https://www.example.com" and set their text color to green, i.e. the first link will be green.
+
+    ii. nth-child & nth-of-type selector:-
+        * The nth-child & nth-of-type selector is used to select elements based on their position & type in a parent element.
+
+        * Both of these selectors can also be used to select elements based on their index, odd/even position, or a specific pattern.
+
+        The `index.html` is
+        -------------------------------------
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+
+        Ex:-
+            i. li:nth-child(2) {
+                    color: red;
+                }
+
+                -------------------
+                This will select the second <li> element in the list and set its text color to red.
+
+            ii. li:nth-of-type(3) {
+                    color: blue;
+                }
+
+                -------------------
+                This will select the third <li> element of the same type in the list and set its text color to blue.
+
+            iii. li:nth-child(odd) {
+                    color: green;
+                }
+
+                -------------------
+                This will select all odd <li> elements in the list and set their text color to green.
+
+            iv. li:nth-of-type(even) {
+                    color: yellow;
+                }
+
+                -------------------
+                This will select all even <li> elements of the same type in the list and set their text color to yellow.
+
+    iii. Star(*) selector:-
+        * The star (*) selector is used to select all elements in a document.
+        * The star (*) selector can be used to apply styles to all elements in a document.
+
+        Ex:-
+            * {
+                color: red;
+            }
+            -------------------
+            This will select all elements in the document and set their text color to red.
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
