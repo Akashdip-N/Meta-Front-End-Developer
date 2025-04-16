@@ -1078,13 +1078,195 @@ CSS Selector:-
             This will select all elements in the document and set their text color to red.
 
 ---------------------------------------------------------------------------------------------
+Specificity:-
+    * Specificity is a measure of how specific a CSS selector is.
+    * The more specific a selector is, the higher its specificity value.
 
+    * Hierarchy of specificity is as follows:-
+        i. Inline styles (style attribute) - 1000
+            Ex:- If the same element are defined in the following way:-
+
+            <p style=“color: white;”>
+            p{color: blue}
+            ------------------------------------
+            This will select the <p> element and set its text color to white, as inline styles have the highest specificity.
+
+        ii. IDs - 100
+            Ex:-
+                #div{
+                    color: red;
+                }
+                -------------------
+                This will select the <div> element with the id "div" and set its text color to red.
+
+        iii. Classes, attributes, and pseudo-classes - 10
+            Ex:-
+                .my-class
+                p[“attribute”]
+                div:hover
+                -------------------
+                This will select all elements with the class "class" and set their text color to green.s
+
+        iv. Elements and pseudo-elements - 1
 
 ---------------------------------------------------------------------------------------------
+Combination Selector:-
+    * These are used to select elements based on their relationship with other elements, such as, descendants, children, siblings, or adjacent to other elements.
 
+    Ex:-
+        i. Descendant selector:- This is used to select elements that are contained within another selector.
+
+        Ex:-
+            This is the index.html file
+            -------------------------------------
+            <div id="blog">
+                <h1> Blog Title </h1>
+                <div>
+                    <h1> Blog Title 2 </h1>
+                    <p> Blog content 1 </p>
+                    <p> Blog content 2 </p>
+                </div>
+            </div>
+
+
+            This is the css file
+            -------------------------------------
+            #blog h1 {
+                color: red;
+            }
+            -------------------------------------
+            This will select all the <h1> elements under the "blog" div and set their text color to red.
+
+        ii. Child selector:- This is used to select elements that are direct children of another selector.
+
+        Ex:-
+            This is the index.html file
+            -------------------------------------
+            <div id="blog">
+                <h1> Blog Title </h1>
+                <div>
+                    <h1> Blog Title 2 </h1>
+                    <p> Blog content 1 </p>
+                    <p> Blog content 2 </p>
+                </div>
+            </div>
+
+
+            This is the css file
+            -------------------------------------
+            #blog > h1 {
+                color: blue;
+            }
+            -------------------------------------
+            This will select the first <h1> element that is a direct child of the "blog" div and set its text color to blue.
+
+        iii. General sibling selector:- This is used to select elements that are siblings of another selector.
+
+        Ex:-
+            This is the index.html file
+            -------------------------------------
+            <div id="blog">
+                <h1> Blog Title </h1>
+                <div>
+                    <h1> Blog Title 2 </h1>
+                    <p> Blog content 1 </p>
+                    <p> Blog content 2 </p>
+                </div>
+            </div>
+
+
+            This is the css file
+            -------------------------------------
+            h1 ~ p {
+                color: yellow;
+            }
+            -------------------------------------
+            This will target all the <p> elements that are siblings of an <h1> element and set their text color to yellow.
+
+        iv. Adjacent sibling selector:- This is used to select elements that are adjacent siblings of another selector, i.e. only the first sibling.
+
+        Ex:-
+            This is the index.html file
+            -------------------------------------
+            <div id="blog">
+                <h1> Blog Title </h1>
+                <div>
+                    <h1> Blog Title 2 </h1>
+                    <p> Blog content 1 </p>
+                    <p> Blog content 2 </p>
+                </div>
+            </div>
+
+
+            This is the css file
+            -------------------------------------
+            h1 + p {
+                color: green;
+            }
+            -------------------------------------
+            This will select all the <p> elements that are adjacent siblings of an <h1> element and set their text color to green.
 
 ---------------------------------------------------------------------------------------------
+Pseudo-Classes:-
+    * Pseudo-classes are used to select elements based on their state or position in the document.
+    * Pseudo-classes can be used to apply styles to elements when they are hovered over, focused, or active.
 
+    Ex:-
+        i. hover:- This is used to select elements when they are hovered over by the mouse pointer.
+
+        Ex:-
+            This is the index.html file
+            ----------------------------------
+            <body>
+                <h1>Hover over me</h1>
+                <button>Click Me</button>
+
+            </body>
+
+            This is the css file
+            ----------------------------------
+            button:hover {
+                color: red;
+            }
+
+            .button:active {
+                color: blue;
+            }
+            ----------------------------------
+            This will select all <button> elements when they are hovered over and set their text color to red, and when they are clicked, it will set their text color to blue.
+
+
+        ii. :focus
+            Ex:-
+                input:focus {
+                    border: 2px solid blue;
+                }
+                -------------------
+                This will select all <input> elements when they are focused and set their border color to blue.
+
+        iii. :active
+            Ex:-
+                button:active {
+                    background-color: green;
+                }
+                -------------------
+                This will select all <button> elements when they are active and set their background color to green.
+
+        iv. :nth-child
+            Ex:-
+                li:nth-child(2) {
+                    color: red;
+                }
+                -------------------
+                This will select the second <li> element in the list and set its text color to red.
+
+        v. :first-child
+            Ex:-
+                li:first-child {
+                    color: blue;
+                }
+                -------------------
+                This will select the first <li> element in the list and set its text color to blue.
 
 ---------------------------------------------------------------------------------------------
 
