@@ -1236,7 +1236,7 @@ Pseudo-Classes:-
             This will select all <button> elements when they are hovered over and set their text color to red, and when they are clicked, it will set their text color to blue.
 
 
-        ii. :focus
+        ii. :focus:- This is used to select elements when they are focused or selected by the user.
             Ex:-
                 input:focus {
                     border: 2px solid blue;
@@ -1244,7 +1244,7 @@ Pseudo-Classes:-
                 -------------------
                 This will select all <input> elements when they are focused and set their border color to blue.
 
-        iii. :active
+        iii. :active:- This is used to select elements when they are active or being clicked.
             Ex:-
                 button:active {
                     background-color: green;
@@ -1269,30 +1269,667 @@ Pseudo-Classes:-
                 This will select the first <li> element in the list and set its text color to blue.
 
 ---------------------------------------------------------------------------------------------
+Form States:-
+    * Form states are used to select elements based on their state or position in the document.
+    * Form states can be used to apply styles to elements when they are focused, active, or disabled.
 
+    Ex:-
+        i. :disabled/enabled:- This is used to select elements that are disabled or enabled.
+            Ex:-
+                input:disabled {
+                    background-color: gray;
+                }
+                -------------------
+                This will select all <input> elements that are disabled and set their background color to gray.
+
+        ii. :checked/indeterminate:- This is used to select elements that are checked or indeterminate.
+            Ex:-
+                input:checked {
+                    background-color: green;
+                }
+                -------------------
+                This will select all <input> elements that are checked and set their background color to green.
+
+        iii. :valid/invalid:- This is used to select elements that are valid or invalid.
+            Ex:-
+                input:valid {
+                    background-color: blue;
+                }
+                -------------------
+                This will select all <input> elements that are valid and set their background color to blue.
+
+---------------------------------------------------------------------------------------------
+First-type-of & last-type-of selector:-
+    * These are pseudo-class selectors that are used to select elements based on their position in the document.
+    * They can be used to select the first or last element of a specific type in a parent element.
+
+    Ex:-
+        i. :first-of-type:- This is used to select the first element of a specific type in a parent element.
+            Ex:-
+                This is the index.html file
+                -------------------------------------
+                <div id="blog">
+                    <h1> Blog Title </h1>
+                    <div>
+                        <h1> Blog Title 2 </h1>
+                        <p> Blog content 1 </p>
+                        <p> Blog content 2 </p>
+                    </div>
+                </div>
+
+                This is the css file
+                -------------------------------------
+                #blog h1:first-of-type {
+                    color: red;
+                }
+
+                -------------------------------------
+                This will select the first <h1> element in the "blog" div and set its text color to red.
+
+        ii. :last-of-type:- This is used to select the last element of a specific type in a parent element.
+            Ex:-
+                This is the index.html file
+                -------------------------------------
+                <div id="blog">
+                    <h1> Blog Title </h1>
+                    <div>
+                        <h1> Blog Title 2 </h1>
+                        <p> Blog content 1 </p>
+                        <p> Blog content 2 </p>
+                    </div>
+                </div>
+
+                This is the css file
+                -------------------------------------
+                #blog h1:last-of-type {
+                    color: blue;
+                }
+
+                -------------------------------------
+                This will select the last <h1> element in the "blog" div and set its text color to blue.
+
+---------------------------------------------------------------------------------------------
+Pseudo-Elements:-
+    * Pseudo-elements are used to select and style specific parts of an element, such as the first line, first letter, or before/after content.
+    * Pseudo-elements can be used to apply styles to specific parts of an element without adding additional HTML markup.
+
+    Ex:-
+        i. ::first-letter:- This is used to select the first letter of an element.
+            Ex:-
+                p::first-letter {
+                    font-size: 2em;
+                    color: red;
+                }
+                -------------------
+                This will select the first letter of all <p> elements and set its font size to 2em and color to red.
+
+        ii. ::first-line:- This is used to select the first line of an element.
+            Ex:-
+                p::first-line {
+                    font-weight: bold;
+                    color: blue;
+                }
+                -------------------
+                This will select the first line of all <p> elements and set its font weight to bold and color to blue.
+
+        iii. ::selection:- This is used to select the text that is currently selected by the user.
+            Ex:-
+                ::selection {
+                    background-color: yellow;
+                    color: black;
+                }
+                -------------------
+                This will select the text that is currently selected by the user and set its background color to yellow and text color to black.
+
+        iv. ::marker:- This are generally used to add styles to the elements to a list, such as bullets or numbers.
+            Ex:-
+                li::marker {
+                    color: green;
+                    content: "•";
+                    font-size: 1.5em;
+                }
+                -------------------
+                This will select the marker of all <li> elements and set its color to green, font size to 1.5em, and content to "•".
+
+        v. ::before / ::after:- This is used to select and style content that is added before or after an element.
+            Ex:-
+                The index.html file is,
+
+                <body>
+                    <p id="para">This is a paragraph.</p>
+                    <p> This is another paragraph.</p>
+                    <p id="para"> This is a paragraph.</p>
+                </body>
+
+                ----------------------
+                The css file is,
+
+                #para::before {
+                    content: "Before ";
+                    color: red;
+                }
+
+                #para::after {
+                    content: " After";
+                    color: blue;
+                }
+
+                ----------------------------------------------
+                The output will be,
+
+                Before This is a paragraph. After
+
+---------------------------------------------------------------------------------------------
+LVHA:- The `LVHA` is the order of the CSS selectors, i.e. the order of the CSS selectors is as follows:-
+    i. LVHA
+        * L - Link
+        * V - Visited
+        * H - Hover
+        * A - Active
+
+    Ex:-
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+
+---------------------------------------------------------------------------------------------
+Selector cheat sheet
+    i. Simple Selectors
+        * Element selector (element)
+        * Class selector (.class)
+        * ID selector (#id)
+        * Universal selector (*)
+
+    Ex:-
+        index.html
+
+        <div class="container">
+            <h1>Title</h1>
+            <p>Paragraph</p>
+            <a href="#">Link</a>
+        </div>
+
+        ----------------------------------------------------
+        i. Element selector:- This is used to select elements based on their type.
+            Ex:-
+            div {
+                background-color: red;
+            }
+            ----------------------------------------
+            This will select all <div> elements and set their background color to red.
+
+        ii. Class selector:- This is used to select elements based on their class.
+            Ex:-
+            .container {
+                background-color: blue;
+            }
+            ----------------------------------------
+            This will select all elements with the class "container" and set their background color to blue.
+
+        iii. ID selector:- This is used to select elements based on their ID.
+            Ex:-
+            #title {
+                color: green;
+            }
+            ----------------------------------------
+            This will select the <h1> element with the id "title" and set its text color to green.
+
+        iv. Universal selector:- This is used to select all elements in a document.
+            Ex:-
+            * {
+                color: yellow;
+            }
+            ----------------------------------------
+            This will select all elements in the document and set their text color to yellow.
+
+    ii. Variation of simple selectors:-
+        * Two Classes (.class1.class2)
+        * Element and Class (element.class)
+        * Two elements (element1, element2)
+
+        i. Two Classes:- This is used to select elements based on two classes.
+            Ex:-
+            .container .title {
+                color: red;
+            }
+            ----------------------------------------
+            This will select all elements with the class "title" that are contained within an element with the class "container" and set their text color to red.
+
+        ii. Element and Class:- This is used to select elements based on their type and class.
+            Ex:-
+            div.container {
+                background-color: blue;
+            }
+            ----------------------------------------
+            This will select all <div> elements with the class "container" and set their background color to blue.
+
+        iii. Two elements:- This is used to select two elements based on their type.
+            Ex:-
+            div, p {
+                color: green;
+            }
+            ----------------------------------------
+            This will select all <div> and <p> elements and set their text color to green.
+
+    iii. Descendant selectors/combinators:-
+        * Descendant (element element)
+        * Child (element > element)
+        * Adjacent sibling (element + element)
+        * General sibling (element ~ element)
+
+        i. Descendant:- This is used to select elements that are contained within another selector.
+            Ex:-
+            .container h1 {
+                color: red;
+            }
+            ----------------------------------------
+            This will select all <h1> elements that are contained within an element with the class "container" and set their text color to red.
+
+        ii. Child:- This is used to select elements that are direct children of another selector.
+            Ex:-
+            .container > h1 {
+                color: blue;
+            }
+            ----------------------------------------
+            This will select all <h1> elements that are direct children of an element with the class "container" and set their text color to blue.
+
+        iii. Adjacent sibling:- This is used to select elements that are adjacent siblings of another selector.
+            Ex:-
+            h1 + p {
+                color: green;
+            }
+            ----------------------------------------
+            This will select all <p> elements that are adjacent siblings of an <h1> element and set their text color to green.
+
+        iv. General sibling:- This is used to select elements that are siblings of another selector.
+            Ex:-
+            h1 ~ p {
+                color: yellow;
+            }
+            ----------------------------------------
+            This will select all <p> elements that are siblings of an <h1> element and set their text color to yellow.
+
+    iv. Attribute selectors:-
+        * Attribute ([href] {} )
+        * Attribute with value ([href="value"] {})
+        * Attribute with partial value ([href*="value"] {} )
+        * Attribute with partial value at the start ([href^="value"] {})
+        * Attribute with partial value at the end ([href$="value"] {} )
+        * Attribute with partial value at the start and end ([href^="value"][href$="value"] {} )
+        * Attribute with whitespace value ([href~="value"] {} )
+
+---------------------------------------------------------------------------------------------
+CSS Effect:-
+    * CSS effects are used to create visual effects on elements, such as transitions, animations, and transformations.
+    * CSS effects can be used to create dynamic and interactive user interfaces.
+
+    Ex:-
+        i. Transition:- This is used to create smooth transitions between different states of an element.
+            Ex:-
+                .box {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    transition: background-color 0.5s ease;
+                }
+
+                .box:hover {
+                    background-color: blue;
+                }
+                ----------------------------------------
+                This will create a smooth transition between the red and blue background colors when the <div> element is hovered over.
+
+        ii. Animation:- This is used to create complex animations using keyframes.
+            Ex:-
+                @keyframes slide {
+                    from {
+                        transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(100px);
+                    }
+                }
+
+                .box {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    animation: slide 1s ease-in-out infinite alternate;
+                }
+                ----------------------------------------
+                This will create a sliding animation that moves the <div> element from its original position to 100 pixels to the right and back.
+
+        iii. Transformation:- This is used to apply transformations to elements, such as scaling, rotating, or skewing.
+            Ex:-
+                .box {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    transform: rotate(45deg);
+                }
+
+---------------------------------------------------------------------------------------------
+Text Effect:-
+    * Text effects are used to create visual effects on text elements, such as shadows, gradients, and text decorations.
+    * Text effects can be used to create dynamic and interactive user interfaces.
+
+    * Main properties of the text contents are:-
+        i. text-transform:-
+            * This is used to control the capitalization of text.
+            * The text-transform property can be set to uppercase, lowercase, capitalize, or none.
+
+            Ex:-
+                p {
+                    text-transform: uppercase;
+                }
+                ----------------------------------------
+                This will set all <p> elements to uppercase.
+
+        ii. text-decoration:-
+            * This is used to add decorations to text, such as underline, overline, or line-through.
+            * The text-decoration property can be set to underline, overline, line-through, or none.
+
+            Ex:-
+                p {
+                    text-decoration: underline;
+                }
+                ----------------------------------------
+                This will set all <p> elements to have an underline.
+
+        iii. font-style:-
+            * This is used to set the style of the font, such as normal, italic, or oblique.
+            * The font-style property can be set to normal, italic, or oblique.
+
+            Ex:-
+                p {
+                    font-style: italic;
+                }
+                ----------------------------------------
+                This will set all <p> elements to italic.
+
+        iv. font-weight:-
+            * This is used to set the weight of the font, such as normal, bold, or bolder.
+            * The font-weight property can be set to normal, bold, bolder, or lighter.
+
+            Ex:-
+                p {
+                    font-weight: bold;
+                }
+                ----------------------------------------
+                This will set all <p> elements to bold.
+
+---------------------------------------------------------------------------------------------
+Tranform & Transition:-
+    * Transform and transition are two CSS properties that are used to create visual effects on elements.
+    * Transform is used to apply transformations to elements, such as scaling, rotating, or skewing.
+    * Transition is used to create smooth transitions between different states of an element.
+
+    Ex:-
+        i. Transform:- This is used to apply transformations to elements, such as scaling, rotating, or skewing.
+            Ex:-
+                .box {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    transform: rotate(45deg);
+                }
+                ----------------------------------------
+                This will rotate the <div> element by 45 degrees.
+
+        ii. Transition:- This is used to create smooth transitions between different states of an element.
+            Ex:-
+                .box {
+                    width: 100px;
+                    height: 100px;
+                    background-color: red;
+                    transition: background-color 0.5s ease;
+                }
+
+                .box:hover {
+                    background-color: blue;
+                }
+                ----------------------------------------
+                This will create a smooth transition between the red and blue background colors when the <div> element is hovered over.
+
+---------------------------------------------------------------------------------------------
+CSS Animation:-
+    * CSS animation is a way to create animations using CSS properties and keyframes.
+    * CSS animation allows you to create complex animations without using JavaScript or images.
+    * It consists of mainly two parts: the animation property and the keyframes.
+        * The animation property is used to specify the name of the animation, the duration, the timing function, and other properties.
+        * The keyframes are used to define the different states of the animation.
+
+    * The animation property can be set to a specific name, duration, timing function, and other properties.
+    * The keyframes are used to define the different states of the animation.
+    * The default timing function is "ease", which creates a smooth transition between the different states of the animation.
+
+   Ex:-
+        index.html
+        -----------------------------------------------------
+        <html>
+            <body>
+                <div class="box"></div>
+            </body>
+        </html>
+
+        styles.css
+        -----------------------------------------------------
+        body{
+            padding: 30px;
+        }
+
+        .box{
+            background-color: lightcoral;
+            width: 50px;
+            height: 50px;
+            animation: myanimation 3s infinite ease-in;
+        }
+
+        @keyframes myanimation {
+            from {
+                width: 50px;
+            }
+
+            to {
+                width: 200px;
+            }
+        }
+
+        -----------------------------------------------------
+        This will create an animation that changes the width of the <div> element from 50 pixels to 200 pixels over a duration of 3 seconds.
+
+        **** The above CSS frames code can be also written like this ****
+        @keyframes myanimation {
+            0%  {
+                    width: 50px;
+                }
+
+            100%{
+                    width: 200px;
+                }
+        }
+
+---------------------------------------------------------------------------------------------
+Animations & Effects:-
+    Different tranform properties are:-
+        i. keyword-value type:none
+            * This is used to set the transform property to none.
+
+            Ex:-
+                .box {
+                    transform: none;
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to none.
+
+        ii. keyword-value type:all
+            * This is used to set the transform property to all.
+
+            Ex:-
+                .box {
+                    transform: all;
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to all.
+
+        iii. function-value type:translate
+            * This is used to set the transform property to translate.
+            * Different variations are:-
+                * translate()
+                * translateX()
+                * translateY()
+                * translateZ()
+                * translate3d(x, y, z)
+
+            Ex:-
+                .box {
+                    transform: translate(50px, 50px);
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to translate it by 50 pixels in both the x and y directions.
+
+        iv. function-value: matrix()
+            * This is used to set the transform property to matrix.
+            * The matrix() function takes six parameters: a, b, c, d, e, and f.
+            * The matrix() function is used to create a 2D transformation matrix that can be used to transform an element in 2D space.5
+
+            Ex:-
+                .box {
+                    transform: matrix(1, 0, 0, 1, 50px, 50px);
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to a matrix transformation that translates it by 50 pixels in both the x and y directions.
+
+        v. function-value type: rotate
+            * This is used to set the transform property to rotate.
+            * Different variations are:-
+                * rotate()
+                * rotateX()
+                * rotateY()
+                * rotateZ()
+                * rotate3d(x, y, z)
+
+            Ex:-
+                .box {
+                    transform: rotate(45deg);
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to rotate it by 45 degrees.
+
+        vi. function-value type: scale
+            * This is used to set the transform property to scale.
+            * Different variations are:-
+                * scale()
+                * scaleX()
+                * scaleY()
+                * scaleZ()
+                * scale3d(x, y, z)
+
+            Ex:-
+                .box {
+                    transform: scale(2);
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to scale it by a factor of 2 in both the x and y directions.
+
+        vii. function-value type: skew
+            * This is used to set the transform property to skew.
+            * Different variations are:-
+                * skew()
+                * skewX()
+                * skewY()
+
+            Ex:-
+                .box {
+                    transform: skew(20deg, 20deg);
+                }
+                ----------------------------------------
+                This will set the transform property of the <div> element to skew it by 20 degrees in both the x and y directions.
+
+---------------------------------------------------------------------------------------------
+Preprocessros:- SASS, SCSS, Stylus
+    * Preprocessors are tools that allow you to write CSS in a more efficient and organized way.
+    * This is same as #define in C/C++.
+    * They provide features such as variables, nesting, mixins, and functions that make it easier to write and maintain CSS code.
+
+    i. SASS (Syntactically Awesome Style Sheets):-
+        * This is a CSS preprocessor that allows you to write CSS in a more efficient and organized way.
+        * It provides features such as variables, nesting, mixins, and functions that make it easier to write and maintain CSS code.
+        * It uses indentation instead of curly braces and semicolons, which makes it more readable.
+
+        Ex:-
+            $primary-color: blue
+
+            .container
+                background-color: $primary-color
+
+    ii. SCSS (Sassy CSS):-
+        * This is a syntax of SASS that uses curly braces and semicolons, similar to CSS.
+        * It allows you to write CSS in a more efficient and organized way.
+
+        Ex:-
+            $primary-color: blue;
+
+            .container {
+                background-color: $primary-color;
+            }
+
+    iii. Stylus:-
+        * This is another CSS preprocessor that allows you to write CSS in a more efficient and organized way.
+        * It provides features such as variables, nesting, mixins, and functions that make it easier to write and maintain CSS code.
+
+        Ex:-
+            primary-color = blue
+
+            .container
+                background-color primary-color
+
+---------------------------------------------------------------------------------------------
+Webkit:-
+    * Webkit is a browser engine used by Safari and other browsers.
+    * It provides a set of CSS properties and features that are specific to Webkit-based browsers.
+    * Webkit properties are prefixed with -webkit- to indicate that they are specific to Webkit-based browsers.
+
+    Ex:-
+        .box {
+            -webkit-transition: background-color 0.5s ease;
+            transition: background-color 0.5s ease;
+        }
+        ----------------------------------------
+        This will create a smooth transition between the red and blue background colors when the <div> element is hovered over in Webkit-based browsers.
 
 ---------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------
 
-
 ---------------------------------------------------------------------------------------------
 
-
 ---------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
 
 ---------------------------------------------------------------------------------------------
