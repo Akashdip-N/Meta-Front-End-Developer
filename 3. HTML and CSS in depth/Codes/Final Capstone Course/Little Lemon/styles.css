@@ -1,0 +1,91 @@
+body {
+    background-color: #ecefee;
+    font-family: "Markazi Text", serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+header > img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    background-color: #333333;
+    font-size: 40px;
+    list-style-type: none;
+    text-align: center;
+    border-radius: 30px;
+
+}
+
+.top-part {
+    padding: 40px;
+    background-image: url("images/lasagne.jpg");
+    color: white
+}
+
+.top-part p {
+    font-size: 20px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 30px;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    display: inline-block;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: #f4e5d6;
+    flex: 1;
+}
+
+article img {
+    width: 80%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+}
+
+footer div {
+    flex: 1;
+}
+
+footer div img {
+    width: 10%;
+    height: auto;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Optional padding */
+}
