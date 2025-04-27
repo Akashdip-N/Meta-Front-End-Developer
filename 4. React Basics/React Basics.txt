@@ -1,0 +1,170 @@
+---------------------------------------------------------------------------------------------
+
+                            React Basics notes
+
+---------------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 1
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
+* React can be used to build single-page applications (SPAs) and mobile applications.
+* Every react application has a root component.
+---------------------------------------------------------------------------------------------
+Functional Component:-
+    * A function that returns a React element.
+    * It can accept props as an argument.
+
+    Ex:-
+        function Welcome() {
+            let greet = "Hello";
+            return (<h1>{greet}</h1>);
+        }
+
+---------------------------------------------------------------------------------------------
+Naming Conventions:-
+    * Component names should start with a capital letter.
+    * File names should match the component name.
+    * Use PascalCase for component names and camelCase for props.
+
+---------------------------------------------------------------------------------------------
+Transpilling:-
+    * The process of converting modern JavaScript (ES6+) code into a version that can run in older browsers.
+    * Babel is a popular transpiler used in React applications.
+
+---------------------------------------------------------------------------------------------
+Folder Structure:-
+    |-- node_modules                :- Dependencies and libraries installed via npm.
+        |-- react
+        |-- react-dom
+    |-- public                      :- Static files that are served directly by the web server.
+        |-- index.html              :- the main HTML file that loads the React application.
+        |-- favicon.ico             :- which are used in the browser tab.
+        |-- manifest.json           :- used for Progressive Web Apps (PWAs) to define the app's metadata.
+        |-- robots.txt              :- used to control how search engines crawl the site.
+    |-- src                         :- Componenets of the application, created via `npm create-app`
+        |-- App.test.js             :- used for testing the App.js component.
+        |-- App.css                 :- Contains the styles for the App.js component.
+        |-- App.js                  :- The main component of the application.
+        |-- index.js                :- ENTRY POINT OF THE APPLICATION, AND IS MOST IMPORTANT
+        |-- index.css               :- Styles for the entire application.
+        |-- logo.svg                :- The React logo used in the application.
+        |-- reportWebVitals.js      :- used for testing and performance monitoring.
+        |-- setupTests.js           :- used for setting up testing environment.
+    |-- package.json                :- Contains metadata about the project and its dependencies.
+    |-- package-lock.json           :- Contains the exact version of each dependency installed.
+    |-- .gitignore                  :- Specifies files and directories to be ignored by Git.
+    |-- README.md                   :- Documentation for the project.
+
+---------------------------------------------------------------------------------------------
+Steps in creating a react app:-
+    i. create a folder which is in accordance to the guideline of react.
+    ii. open the terminal and navigate to the folder.
+    iii. run the command `npm init project-name` to create a new react app.
+    iv. navigate to the project folder using `cd project-name`.
+
+---------------------------------------------------------------------------------------------
+Exports types & meaninigs:-
+    i. Default exports:- This is used when the function name is same as the filename.
+        Ex:-
+            // default export
+
+            export default App;
+
+    ii. Named exports:- This is used when the function name is different from the filename.
+        Ex:-
+            // named export
+
+            export { App };
+
+---------------------------------------------------------------------------------------------
+Import statements:-
+    i. Default import:- This is used when the function name is same as the filename.
+        Ex:-
+            // default import
+
+            import App from './App';
+
+    ii. Named import:- This is used when the function name is different from the filename.
+        Ex:-
+            // named import
+
+            import { App } from './App';
+
+---------------------------------------------------------------------------------------------
+Props:-
+    * Props are used to pass data from one component to another.
+    * Props are read-only and cannot be modified by the child component.
+    * Props can be of any data type, including objects and arrays.
+    * Props are passed to the component as an object.
+    * (.) dot operator is used to access the properties of the props object.
+
+    Ex:-
+        function Welcome(props) {
+            return (<h1>{props.greet}</h1>);
+        }
+
+        <Welcome greet="Hello" />
+
+---------------------------------------------------------------------------------------------
+Parent -> Child:-
+    * The parent component can pass data to the child component using props.
+    * The child component can access the props using `props` object.
+    * This is a unidirectional data flow, meaning data can only flow from parent to child.
+
+    Ex:-
+        function Parent() {
+            return (<Child greet="Hello" />);
+        }
+
+        function Child(props) {
+            return (<h1>{props.greet}</h1>);
+        }
+
+    -------------------------------------------
+    * The parent component can pass data to the child component using props.
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
