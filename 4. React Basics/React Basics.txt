@@ -59,14 +59,14 @@ Folder Structure:-
 
 ---------------------------------------------------------------------------------------------
 Steps in creating a react app:-
-    a. using `npm create-react-app project-name` command.
+    a. using `npx create-react-app project-name` command.
 
         *** This command, creates a new react app with the name of the project. ***
 
         Steps:-
             i. Go to the folder inside which you want to create the react app.
             ii. open the terminal and navigate to the folder.
-            iii. run the command `npm create-react-app project-name` to create a new react app.
+            iii. run the command `npx create-react-app project-name` to create a new react app.
             iv. navigate to the project folder using `cd project-name`.
             v. run the command `npm start` to start the development server.
 
@@ -108,6 +108,36 @@ Import statements:-
             // named import
 
             import { App } from './App';
+
+--------------------------------------------------------------------------------------------------
+Return statement:-
+    * The return statement is used to return a React element from a functional component.
+    * The return statement must return a single React element.
+
+    Ex:-
+        function Welcome() {
+            return (
+                <div>
+                    <h1>Hello</h1>
+                    <h2>World</h2>
+                </div>
+            );
+        }
+
+        ---------------------------------------------
+        This will create a div element with two child elements, h1 and h2.
+
+    Ex:-
+        // incorrect example
+        function Welcome() {
+            return (
+                <h1>Hello</h1>
+                <h2>World</h2>
+            );
+        }
+
+        -----------------------------------------------
+        This is incorrect because the return statement must return a single React element.
 
 ---------------------------------------------------------------------------------------------
 Props:-
