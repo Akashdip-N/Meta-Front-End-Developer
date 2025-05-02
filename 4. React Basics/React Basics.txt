@@ -59,10 +59,27 @@ Folder Structure:-
 
 ---------------------------------------------------------------------------------------------
 Steps in creating a react app:-
-    i. create a folder which is in accordance to the guideline of react.
-    ii. open the terminal and navigate to the folder.
-    iii. run the command `npm init project-name` to create a new react app.
-    iv. navigate to the project folder using `cd project-name`.
+    a. using `npm create-react-app project-name` command.
+
+        *** This command, creates a new react app with the name of the project. ***
+
+        Steps:-
+            i. Go to the folder inside which you want to create the react app.
+            ii. open the terminal and navigate to the folder.
+            iii. run the command `npm create-react-app project-name` to create a new react app.
+            iv. navigate to the project folder using `cd project-name`.
+            v. run the command `npm start` to start the development server.
+
+    b. using `npm init react-app` command.
+
+        *** This command, creates a new react app with the same name as of the folder ***
+
+        Steps:-
+            i. Create a folder with the name of the project, ex: `project-name`.
+            ii. open the terminal and navigate to the folder,
+                cd project-name
+            iii. run the command `npm init react-app.` to create a new react app.
+            iv. To start the development server, run the command `npm start`.
 
 ---------------------------------------------------------------------------------------------
 Exports types & meaninigs:-
@@ -126,28 +143,258 @@ Parent -> Child:-
     * The parent component can pass data to the child component using props.
 
 ---------------------------------------------------------------------------------------------
+Props and children:-
+    * The `children` prop is a special prop that is used to pass child elements to a component.
+    * The `children` prop can be accessed using `props.children`.
 
+    Ex:-
+        function Parent(props) {
+            const containerStyle = {
+                border: "2px solid black",
+                padding: "10px",
+                margin: "10px"
+            };
+
+            return (
+                <div style={containerStyle}>
+                    {props.children}
+                </div>
+            );
+        }
+        ------------------------------------------
+        This will pass the containerStyle as a prop from the Parent component to the Child component.
 
 ---------------------------------------------------------------------------------------------
+Styling props:-
+    i. Inline styling:-
+        * Inline styles are defined using the `style` attribute.
+        * The value of the `style` attribute is an object with camelCased properties.
 
+        Ex:-
+            a. Styling the attributes in the same line of the component.
+
+                index.js
+                ----------------------------
+                <div className="container">
+                    <h1 style={{ color: "red", fontSize: "20px" }}>{props.heading}
+                    </h1>
+                    <h2 style={{ color: "blue", fontSize: "15px" }}>{props.subheading}
+                    </h2>
+                </div>
+
+            b. Styling the attributes in a separate object.
+
+                index.js
+                ----------------------------
+                const headingStyle = {
+                    color: "red",
+                    fontSize: "20px"
+                };
+
+                const subheadingStyle = {
+                    color: "blue",
+                    fontSize: "15px"
+                };
+
+                <div className="container">
+                    <h1 style={headingStyle}>{props.heading}</h1>
+                    <h2 style={subheadingStyle}>{props.subheading}</h2>
+                </div>
+
+            --------------------------------------------------
+            Both of the styles will create a h1 element with red text and a font size of 20px, and a h2 element with blue text and a font size of 15px.
+
+        ii. External CSS:-
+            * External CSS is defined in a separate CSS file and imported into the component.
+            * The CSS file is imported using the `import` statement.
+
+            Ex:-
+                index.js
+                ----------------------------
+                <div className="container">
+                    <h1>{props.heading}</h1>
+                    <h2>{props.subheading}</h2>
+                </div>
+
+                styles.css
+                ----------------------------
+                #h1 {
+                    color: red;
+                    font-size: 20px;
+                }
+
+                #h2 {
+                    color: blue;
+                    font-size: 15px;
+                }
+                --------------------------------------------------
+                This will create a h1 element with red text and a font size of 20px, and a h2 element with blue text and a font size of 15px.
 
 ---------------------------------------------------------------------------------------------
+Arrow functions:-
+    * These functions are used to create functional components.
+    * Arrow functions are a shorter syntax for writing functions.
 
+    Ex:-
+        a. Function which accepts some parameters
+            normal way of writing a function.
+            -------------------------------------
+            const Nav = function(props) {
+                return (
+                    <ul>
+                        <li>{props.first}</li>
+                    </ul>
+                )
+            }
+
+
+            Arrow function way of writing a function.
+            -------------------------------------
+            const Nav = (props) => {
+                return (
+                    <ul>
+                        <li>{props.first}</li>
+                    </ul>
+                )
+            }
+
+            or
+
+            // Arrow function without the use of `()`
+            const Nav = props => {
+                return (
+                    <ul>
+                        <li>{props.first}</li>
+                    </ul>
+                )
+            }
+
+            --------------------------------------
+            In this function,
+                * The `function` keyword has been replaced with `const` and `=>`
+                * The function accepts `props` as an argument and returns a JSX element.
+
+        b. Function which doesn't accepts some parameters
+
+            const Nav = () => {
+                return (
+                    <ul>
+                        <li>Home</li>
+                    </ul>
+                )
+            }
+
+            or
+
+            // Arrow function without the use of `()`
+            const Nav = () => (
+                <ul>
+                    <li>Home</li>
+                </ul>
+            )
 
 ---------------------------------------------------------------------------------------------
+forEach() method:-
+    * The `forEach()` method is used to iterate over an array and perform a function on each element.
+    * The `forEach()` method does not return a new array, it simply executes the function on each element.
 
+    Ex:-
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach((number) => {
+            console.log(number);
+        });
+
+        // Output:
+        // 1
+        // 2
+        // 3
+        // 4
+        // 5
 
 ---------------------------------------------------------------------------------------------
+Using forEach() and arrow function:-
+    Ex:-
+        // in ES5
+        [10, 20, 30].forEach(function(item) {
+            return item * 2;
+            }
+        );
 
+        or
+
+        // in ES6
+        [10, 20, 30].forEach(item => return item * 2);
 
 ---------------------------------------------------------------------------------------------
+Embedded JSX Expressions:-
+    * They are used to embed JavaScript expressions inside JSX.
+    * They are enclosed in curly braces `{}`.
 
+    Ex:-
+        function greet(name) {
+            return <h1>Hello, {name}!</h1>;
+        }
+
+        const message = <p>{greet("World")}</p>;
+
+        ---------------------------------------------
+        The output will be:
+            Hello, World!
 
 ---------------------------------------------------------------------------------------------
+Ternary operators & functions:-
+    * This is a shorthand way of writing an if-else statement.
+    * It is used to conditionally render elements in JSX.
 
+    Ex:-
+        normal expression
+        ------------------------------------
+        let name = "John";
+        if (name == "John") {
+            console.log("Hello, John!");
+        } else {
+            console.log("Hello, Friend!");
+        }
+
+        ternary expression
+        ------------------------------------
+        let name = "John";
+        let message = (name == "John") ? "Hello, John!" : "Hello, Friend!";
+        console.log(message);
+
+        ---------------------------------------------
+        The output for both the expression will be:
+            Hello, John!
 
 ---------------------------------------------------------------------------------------------
+Expression as props:-
+    * You can pass an expression as a prop to a component.
+    * The expression will be evaluated and the result will be passed as a prop.
 
+    Ex:-
+        const bool = true;
+
+        function Fun(props) {
+            return (
+                <h2>
+                    toggleBoolean prop is:
+                    {props.toggleBoolean.toString()}
+                </h2>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                    <h1>Boolean Prop Example</h1>
+                    <Fun toggleBoolean={bool} />
+                </div>
+            );
+        }
+        ---------------------------------------------
+        The output will be:
+            Boolean Prop Example
+            toggleBoolean prop is: true
 
 ---------------------------------------------------------------------------------------------
 
