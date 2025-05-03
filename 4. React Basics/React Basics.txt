@@ -427,21 +427,116 @@ Expression as props:-
             toggleBoolean prop is: true
 
 ---------------------------------------------------------------------------------------------
+***************************************************************************************
 
+                                    Week 2
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
+Mouse Events Avaiable in React:-
+    * onClick
+    * onDoubleClick
+    * onMouseEnter
+    * onMouseLeave
+    * onMouseMove
+    * onMouseOver
+    * onMouseOut
 
 ---------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
+Clipboard Events Avaiable in React:-
+    * onCopy
+    * onCut
+    * onPaste
 
 ---------------------------------------------------------------------------------------------
+Try Catch Block:-
+    * The try-catch block is used to handle errors in JavaScript.
+    * The code inside the try block is executed, and if an error occurs, the code inside the catch block is executed.
 
+    Ex:-
+        try {
+            // code that may throw an error
+            let x = 10;
+            let y = 0;
+            let z = x / y;
+        } catch (error) {
+            // code to handle the error
+            console.log("Error:", error);
+        }
 
 ---------------------------------------------------------------------------------------------
+Event Handling:-
+    * Event handling is the process of responding to user actions in a web application.
+    * In React, events are handled using event handlers.
+    * Event handlers are functions that are called when an event occurs.
 
+    Ex:-
+        function handleClick() {
+            alert("Button clicked!");
+        }
+
+        function App() {
+            return (
+                <div>
+                    <button onClick={handleClick}>Click Me</button>
+                </div>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+Event handling techniques:-
+    i. Inline anonymous ES5 functions:-
+        * This is the most common way of handling events in React.
+        * The event handler is defined inline as an anonymous function.
+
+        Ex:-
+            <button onClick={function() { alert("Button clicked!"); }}>
+                Click Me
+            </button>
+
+    ii. Inline anonymous ES6 functions (arrow functions):-
+        * This is the most common way of handling events in React.
+        * The event handler is defined inline as an anonymous function.
+
+        Ex:-
+            <button onClick={() => alert("Button clicked!")}>
+                Click Me
+            </button>
+
+    iii. Separate function declaration:-
+        * In this method, we first declare a seperate function and then reference it's name in the event handler.
+
+        Ex:-
+           function App(){
+                function handleClick() {
+                    console.log("Button clicked!");
+                }
+
+                return (
+                    <div>
+                        <button onClick={handleClick}>
+                            Seperate function declaration
+                        </button>
+                    </div>
+                );
+            }
+
+    iv. Separate function expression:-
+        * In this method, we first declare and store the function into a const variable and then reference it's name in the event handler.
+
+        Ex:-
+            function App(){
+                const handleClick = () => {
+                    console.log("Button clicked!");
+                }
+
+                return (
+                    <div>
+                        <button onClick={handleClick}>
+                            Seperate function expression
+                        </button>
+                    </div>
+                );
+            }
 
 ---------------------------------------------------------------------------------------------
