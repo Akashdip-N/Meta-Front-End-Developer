@@ -540,3 +540,261 @@ Event handling techniques:-
             }
 
 ---------------------------------------------------------------------------------------------
+Parent-child relationship
+    * This method is used to pass data from parent to child component.
+    * The data flow starts from the parent component and ends at the child component.
+    * The data flow can be multiple levels of nesting, from the parent component to the child component.
+
+    Ex:-
+        // Parent component
+        function Parent() {
+            const data = "Hello from Parent!";
+            return <Child data={data} />;
+        }
+
+        // Child component
+        function Child(props) {
+            return <h1>{props.data}</h1>;
+        }
+
+        ---------------------------------------------
+        The output will be within the h1 element:
+            Hello from Parent!
+
+        ---------------------------------------------
+        Explanation:
+            * The Parent component passes the `data prop` to the Child component.
+            * The Child component receives the `data prop` and displays it in an `h1 element`.
+
+---------------------------------------------------------------------------------------------
+Data Flow in react:-
+    * React follows a unidirectional data flow, meaning data flows in one direction, from parent to child.
+    * This makes it easier to understand and debug the application.
+    * The data can only be passed from parent to child, and not from child to parent.
+    * The data that is passed from parent to child is called props.
+    * The data which is recieved by the child component is called `state`.
+    * The child component can modify the state, but it cannot modify the props, i.e. the data passed from parent to child.
+
+---------------------------------------------------------------------------------------------
+Hooks:-
+    * Hooks are functions that let you use state and other React features in functional components.
+    * Hooks are a new addition in React 16.8.
+    * Hooks allow you to use state and lifecycle methods in functional components.
+    * Hooks are used to manage state and side effects in functional components.
+    * Hooks example are:- useState, useEffect, useContext, useReducer, useRef, etc.
+
+    Ex:-
+        import { useState } from 'react';
+
+        export default function InputComponent() {
+        const [inputText, setText] = useState('hello');
+
+        // function to change the value of text, based on the input by the user
+        function handleChange(e) {
+            setText(e.target.value);
+        }
+
+        return (
+            <>
+                <input value={inputText} onChange={handleChange} />
+                <p>You typed: {inputText}</p>
+                <button onClick={() => setText('hello')}>
+                    Reset
+                </button>
+                </>
+            );
+        }
+        ---------------------------------------------
+        In the above example,
+
+        We have created a function which changes the value of text gets changed based on the input by the user.
+
+---------------------------------------------------------------------------------------------
+Different types of hooks:-
+    i. useRef:-
+        * The `useRef` hook is used to create a mutable reference that persists for the full lifetime of the component.
+        * It can be used to access DOM elements or store mutable values.
+
+        Ex:-
+            function TextInputWithFocusButton() {
+                const inputEl = useRef(null);
+                const onButtonClick = () => {
+                    // `current` points to the mounted text input element
+                    inputEl.current.focus();
+                };
+                return (
+                    <>
+                    <input ref={inputEl} type="text" />
+                    <button onClick={onButtonClick}>Focus the input</button>
+                    </>
+                );
+            }
+
+---------------------------------------------------------------------------------------------
+Q. What is State?
+A.
+    * State is a built-in object in React that is used to manage the data of a component.
+    * State is mutable and can be changed by the component itself.
+    * State is used to store data that can change over time, such as user input or API responses.
+    * State is managed within the component and can be passed to child components as props.
+    * `useState()` hook is used to manage state in functional components.
+
+    Ex:-
+        import React, { useState } from 'react';
+
+        function Counter() {
+            const [count, setCount] = useState(0);
+
+            return (
+                <div>
+                    <p>You clicked {count} times</p>
+                    <button onClick={() => setCount(count + 1)}>
+                        Click me
+                    </button>
+                </div>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+Stateful & Stateless components:-
+    * Stateful components are components that manage their own state.
+    * Stateless components are components that do not manage their own state and rely on props for data.
+
+    Ex:-
+        // Stateful component
+        class Counter extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { count: 0 };
+            }
+
+            render() {
+                return (
+                    <div>
+                        <p>You clicked {this.state.count} times</p>
+                        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+                            Click me
+                        </button>
+                    </div>
+                );
+            }
+        }
+
+        // Stateless component
+        function StatelessComponent(props) {
+            return <h1>{props.message}</h1>;
+        }
+
+---------------------------------------------------------------------------------------------
+Lifting state:-
+    * Lifting state is the process of moving state from a child component to a parent component.
+    * This is done to share state between multiple components or to manage state in a single place.
+    * Lifting state is done by passing a function from the parent component to the child component as a prop.
+
+    Ex:-
+        function Parent() {
+            const [count, setCount] = useState(0);
+
+            return (
+                <div>
+                    <Child count={count} setCount={setCount} />
+                </div>
+            );
+        }
+
+        function Child(props) {
+            return (
+                <div>
+                    <p>You clicked {props.count} times</p>
+                    <button onClick={() => props.setCount(props.count + 1)}>
+                        Click me
+                    </button>
+                </div>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+Prop drilling:-
+    * Prop drilling is the process of passing data from a parent component to a child component through multiple levels of nesting.
+    * This can make the code difficult to read and maintain.
+    * Prop drilling can be avoided by using context or state management libraries like Redux.
+
+    Ex:-
+
+        // Parent component passing `data` to child component
+        function Parent() {
+            const data = "Hello from Parent!";
+            return <Child data={data} />;
+        }
+
+        // Child component passing `data` to grandchild component
+        function Child(props) {
+            return <GrandChild data={props.data} />;
+        }
+
+        function GrandChild(props) {
+            return <h1>{props.data}</h1>;
+        }
+        ---------------------------------------------
+        The output will be within the h1 element:
+            Hello from Parent!
+
+---------------------------------------------------------------------------------------------
+Context API:-
+    * Context API is a built-in feature in React that allows you to share data between components without having to pass props down manually at every level.
+    * It is used to avoid prop drilling and make it easier to manage global state.
+    * Context API is useful for managing global state, such as user authentication, theme, and language.
+
+    Ex:-
+        import React, { createContext, useContext } from 'react';
+
+        const ThemeContext = createContext('light');
+
+        function App() {
+            return (
+                <ThemeContext.Provider value="dark">
+                    <Toolbar />
+                </ThemeContext.Provider>
+            );
+        }
+
+        function Toolbar() {
+            return (
+                <div>
+                    <ThemedButton />
+                </div>
+            );
+        }
+
+        function ThemedButton() {
+            const theme = useContext(ThemeContext);
+            return <button className={theme}>Themed Button</button>;
+        }
+---------------------------------------------------------------------------------------------
+Managing state
+    * State is managed using the `useState` hook in functional components.
+    * The `useState` hook returns an array with two elements: the current state and a function to update the state.
+
+    Ex:-
+        import React, { useState } from 'react';
+
+        function Counter() {
+            const [count, setCount] = useState(0);
+
+            return (
+                <div>
+                    <p>You clicked {count} times</p>
+                    <button onClick={() => setCount(count + 1)}>
+                        Click me
+                    </button>
+                </div>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
