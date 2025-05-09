@@ -792,9 +792,233 @@ Managing state
         }
 
 ---------------------------------------------------------------------------------------------
+*********************************************************************************************
+
+                                    Week 3
+
+*********************************************************************************************
+---------------------------------------------------------------------------------------------
+Website Navigation:-
+    * They are parts of a website that allow users to navigate between different pages or sections of the site.
+    * Common practical navigation patterns:-
+        i. Horizontal navigation bar (nav bar)
+        ii. Vertical navigation menu (side bar)
+        iii. Menu that is hidden under the vertical navigation menu
+        iv. Footer navigation
+
+---------------------------------------------------------------------------------------------
+Difference between react and html design:-
+    * In case of React, the whole page is rendered at once, whereas in case of HTML, the page is rendered in parts.
+    * In case of React, the page is rendered using components, whereas in case of HTML, the page is rendered using HTML tags.
+
+---------------------------------------------------------------------------------------------
+Single-page Apps:-
+    * A single-page application (SPA) is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the app.
+    * SPAs use client-side routing to navigate between different views without reloading the page.
+    * SPAs provide a smoother user experience and faster navigation compared to traditional multi-page applications.
+
+---------------------------------------------------------------------------------------------
+Implementation:-
+    i. Different pages are broken in to templates / views, each view contains the HTML code for that page, which can be updated by the application.
+    ii. The application uses a router to manage the navigation between different views.
 
 
 ---------------------------------------------------------------------------------------------
+Approaches for serving code and resources in Single page apps:-
+    i. Bundling:-
+        The procces in which the code returns and loads all the necessary resources at once.
 
+    ii. Code splitting / lazy loading :-
+        * The process of splitting the code into smaller chunks and loading them on demand.
+        * Additional resources are loaded only when they are needed, reducing the initial load time, ex:- when the user navigates to a specific section of the application.
+
+---------------------------------------------------------------------------------------------
+React router library:-
+    * React Router is a library that allows you to create single-page applications (SPAs) with navigation.
+    * It allows you to define routes and navigate between different components based on the URL.
+    * React Router uses the concept of "routes" to define the mapping between the URL and the component to be rendered.
+
+    Ex:-
+        import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+        function App() {
+            return (
+                <Router>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/about" component={About} />
+                        <Route path="/contact" component={Contact} />
+                    </Switch>
+                </Router>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+Installation:-
+    * To install React Router, you can use npm or yarn.
+    * Run the following command in your terminal:
+
+        npm install react-router-dom@6
+
+    or
+
+        yarn add react-router-dom@6
+
+---------------------------------------------------------------------------------------------
+Conditional Rendering:-
+    * Conditional rendering is the process of rendering different components or elements based on certain conditions.
+    * In React, you can use JavaScript expressions to conditionally render components.
+
+    Ex:-
+        function App() {
+            const day = new Date().getDay();
+
+            return (
+                <div>
+                    {day >= 1 && day <= 5 ? (
+                        <h1>Weekday</h1>
+                    ) : (
+                        <h1>Weekend</h1>
+                    )}
+                </div>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+Conditional Components:-
+    * Conditional components are components that are rendered based on certain conditions.
+    * You can use conditional rendering to show or hide components based on the state or props.
+
+    Ex:-
+        function LogInOutButton(props) {
+        const isLoggedIn = props.isLoggedIn;
+            if (isLoggedIn) {
+                return <LogoutButton />;
+            } else {
+                return <LoginButton />;
+        }
+
+    --------------------------------------------
+    Explanation:
+        * In this example, the `LogInOutButton` component checks the value of the `isLoggedIn` prop.
+        * If `isLoggedIn` is true, it renders the `LogoutButton` component.
+        * If `isLoggedIn` is false, it renders the `LoginButton` component.
+
+---------------------------------------------------------------------------------------------
+Assets:-
+    * Assets are files that are used in the application, such as images, fonts, and stylesheets.
+    * Assets can be imported into the application using the `import` statement.
+    * Statement used:-
+        import our_wish_var_name from 'location_of_the_file';
+
+    Ex:-
+        import logo from './logo.png';
+---------------------------------------------------------------------------------------------
+What is a webpack?
+    * Webpack is a module bundler for JavaScript applications.
+    * It takes modules with dependencies and generates static assets representing those modules.
+    * Webpack can be used to bundle JavaScript, CSS, images, and other assets into a single file or multiple files.
+    * Webpack can also be used to optimize the performance of the application by minifying and compressing the code.
+
+---------------------------------------------------------------------------------------------
+Isomorphic applications:-
+    * Isomorphic applications are applications that can run on both the client and server side.
+    * Isomorphic applications use the same codebase for both the client and server side.
+    * Isomorphic applications can improve performance and SEO by rendering the initial HTML on the server side and sending it to the client.
+
+---------------------------------------------------------------------------------------------
+Techniques for using embedded assets:-
+    i. Using the `import` statement:-
+        * You can use the `import` statement to import assets into your application.
+        * The imported asset can be used in the component.
+
+        Ex:-
+            import logo from './logo.png';
+
+            function App() {
+                return (
+                    <div>
+                        <img src={logo} alt="Logo" />
+                    </div>
+                );
+            }
+
+    ii. Using the `require` statement:-
+        * You can use the `require` statement to import assets into your application.
+        * The imported asset can be used in the component.
+
+        Ex:-
+            const logo = require('./logo.png');
+
+            function App() {
+                return (
+                    <div>
+                        <img src={logo} alt="Logo" />
+                    </div>
+                );
+            }
+
+    iii. Using image from the internet:-
+        * You can use the URL of the image to display it in your application.
+        * The URL can be used in the `src` attribute of the `img` tag.
+
+        Ex:-
+            function App() {
+                return (
+                    <div>
+                        <img src="https://example.com/logo.png" alt="Logo" />
+                    </div>
+                );
+            }
+
+---------------------------------------------------------------------------------------------
+Audio & Video assets:-
+    * Audio and video assets can be used in the application using the `audio` and `video` tags.
+    * The `src` attribute of the `audio` and `video` tags can be used to specify the location of the audio or video file.
+
+    Ex:-
+        function App() {
+            return (
+                <div>
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio tag.
+                    </audio>
+                    <video width="320" height="240" controls>
+                        <source src="video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            );
+        }
+
+---------------------------------------------------------------------------------------------
+Media Packages:-
+    * For installation we have to run `npm install react-player` command inside the project folder.
+    * To know more visit this site:- https://www.npmjs.com/package/react-player
+
+    * To use the package, we have to write this line,
+        import ReactPlayer from 'react-player';
+
+        // this code will import the entire media package into the project.
+
+    * If we want to only play YouTube videos then, we have to write this line,
+        import YouTube from 'react-player/youtube';
+
+        // this code will import only the YouTube media package into the project.
+
+    Ex:-
+        import ReactPlayer from 'react-player';
+
+        function App() {
+            return (
+                <div>
+                    <ReactPlayer url="https://www.youtube.com/watch?v=xyz" />
+                </div>
+            );
+        }
+
+        ---------------------------------------------
+        The output will be a YouTube video player that plays the video with the specified URL.
 
 ---------------------------------------------------------------------------------------------
