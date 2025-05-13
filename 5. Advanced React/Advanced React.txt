@@ -27,23 +27,147 @@ map() method:-
         ["John", "Jane", "Doe"]
 
 ---------------------------------------------------------------------------------------------
+Keys
+    * Keys are used to identify which items have changed, are added, or are removed.
+   * This is important for performance reasons, as it helps React optimize rendering.
 
+   Ex:-
+        const data = [
+            { id: 1, name: "John" },
+            { id: 3, name: "Doe" }
+            { id: 2, name: "Jane" },
+        ];
+
+        const listItems = data.map(item => {
+            return <li key={item.id}>{item.name}</li>;
+        });
+
+        console.log(listItems);
+        ----------------------------------------
+        The output will be:
+        <li key="1">John</li>
+        <li key="3">Doe</li>
+        <li key="2">Jane</li>
+
+    Explanation:-
+        Since, the id is unique for each of items, we can use it as a key.
 
 ---------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------------
+Diffing algorithm:-
+    * React uses a diffing algorithm to compare the new virtual DOM with the previous one.
+    * It identifies what has changed and updates only those parts of the real DOM.
+    * This process is efficient and helps in optimizing performance.
 
 ---------------------------------------------------------------------------------------------
+Controlled componenets:-
+    * These are the set of components which offers a declarative application programming interface (API).
+    * `Value` prop is used to set the value of the input field.
+    * `onChange` prop is used to handle the change event.
+    * `onSubmit` prop is used to handle the submit event.
+
+    Ex:-
+        class ControlledComponent extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { value: '' };
+            }
+
+            handleChange = (event) => {
+                this.setState({ value: event.target.value });
+            }
+
+            handleSubmit = (event) => {
+                alert('A name was submitted: ' + this.state.value);
+                event.preventDefault();
+            }
+
+            render() {
+                return (
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Name:
+                            <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        </label>
+                        <input type="submit" value="Submit" />
+                    </form>
+                );
+            }
+        }
 
 ---------------------------------------------------------------------------------------------
+Controlled components vs Uncontrolled components:-
+
+i. Uncontrolled components:-
+    * These are the components which do not offer a declarative application programming interface (API).
+    * `defaultValue` prop is used to set the default value of the input field.
+    * `ref` prop is used to get the value of the input field.
+
+    Ex:-
+        const Form = () => {
+            const inputRef = useRef(null);
+            const handleSubmit = () => {
+            const inputValue = inputRef.current.value;
+            // Do something with the value
+        }
+
+        return (
+                <form onSubmit={handleSubmit}>
+                    <input ref={inputRef} type="text" />
+                </form>
+            );
+        };
+    --------------------------------------------------------
+    With this code we can get the value of the input field using the `ref` prop.
+
+ii. Controlled components:-
+    * This accepts the value as a prop and a callback to change the state.
+
+    Ex:-
+        const Form = () => {
+            const [value, setValue] = useState("");
+
+            const handleChange = (e) => {
+            setValue(e.target.value)
+        }
+
+        return (
+                <form>
+                    <input
+                        value={value}
+                        onChange={handleChange}
+                        type="text"
+                    />
+                </form>
+            );
+        };
+    --------------------------------------------------------
+    Explanation:-
+        * First the code starts with an empty string "".
+        * When the user types and then the `handleChange` function is called, which updates the state with the new value with the `setValue` function.
 
 ---------------------------------------------------------------------------------------------
+Forms using react:-
+    * Forms are used to collect user input.
+    * React provides a way to handle forms using controlled components and uncontrolled components.
+    *
 
 ---------------------------------------------------------------------------------------------
+preventDefault():-
+    * This method is used to prevent the default behavior of an event.
+    * For example, when a form is submitted, the default behavior is to refresh the page.
+    * By using `preventDefault()`, we can prevent this behavior and handle the form submission using JavaScript.
+
+    Ex:-
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            // Handle form submission
+        }
+
+        return (
+            <form onSubmit={handleSubmit}>
+                <input type="text" />
+                <button type="submit">Submit</button>
+            </form>
+        );
 
 ---------------------------------------------------------------------------------------------
