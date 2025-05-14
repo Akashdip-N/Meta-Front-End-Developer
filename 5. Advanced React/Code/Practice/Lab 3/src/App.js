@@ -56,7 +56,9 @@ function App() {
             <input
               value={firstName}
               placeholder="First name"
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={(e) =>
+                setFirstName(e.target.value)
+              }
             />
           </div>
           <div className="Field">
@@ -64,7 +66,9 @@ function App() {
             <input
               value={lastName}
               placeholder="Last name"
-              onChange={(e) => setLastName(e.target.value)}
+              onChange={(e) =>
+                setLastName(e.target.value)
+              }
             />
           </div>
           <div className="Field">
@@ -74,7 +78,9 @@ function App() {
             <input
               value={email}
               placeholder="Email address"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) =>
+                setEmail(e.target.value)
+              }
             />
           </div>
           <div className="Field">

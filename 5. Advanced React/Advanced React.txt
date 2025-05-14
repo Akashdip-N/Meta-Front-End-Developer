@@ -171,3 +171,67 @@ preventDefault():-
         );
 
 ---------------------------------------------------------------------------------------------
+onFocus():-
+    * This event is triggered when an element gains focus.
+    * It can be used to perform actions when an input field is focused.
+
+    Ex:-
+        const handleFocus = () => {
+            console.log("Input field is focused");
+        }
+
+        return (
+            <input type="text" onFocus={handleFocus} />
+        );
+
+---------------------------------------------------------------------------------------------
+onBlur():-
+    * This event is triggered when an element loses focus.
+    * It can be used to perform actions when an input field is blurred.
+    * This is used to determine when an input has been interacted with at least once.
+
+    Ex:-
+        const handleBlur = () => {
+            console.log("Input field is blurred");
+        }
+
+        return (
+            <input type="text" onBlur={handleBlur} />
+        );
+
+---------------------------------------------------------------------------------------------
+onChange():-
+    * This event is triggered when the value of an input field changes.
+    * It can be used to perform actions when the value of an input field changes.
+
+    Ex:-
+        const handleChange = (event) => {
+            console.log(event.target.value);
+        }
+
+        return (
+            <input type="text" onChange={handleChange} />
+        );
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 2
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
