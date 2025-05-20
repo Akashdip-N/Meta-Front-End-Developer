@@ -64,6 +64,7 @@ Controlled componenets:-
     * `Value` prop is used to set the value of the input field.
     * `onChange` prop is used to handle the change event.
     * `onSubmit` prop is used to handle the submit event.
+    * The internal state of the component is managed by React.
 
     Ex:-
         class ControlledComponent extends React.Component {
@@ -230,34 +231,53 @@ Props:-
 Context:-
     * Context is used to pass data through the component tree without having to pass props down manually at every level.
     * It is used to share data that can be considered "global" for a tree of React components.
+    * It is used to avoid `prop drilling`, which is the process of passing data through multiple layers of components.
+    * Here context API is used to create a context object.
 
     Ex:-
-        import React, { useState, useContext } from 'react';
-        const MyContext = React.createContext();
+        Context.js
+        ------------------------------------
+        import React, { createContext } from 'react';
 
-        const MyProvider = (props) => {
-            const [value, setValue] = useState("Hello World");
+        const MyContext = createContext(undefined);
 
+        export const MyProvider = ({ children }) => {
+            const value = { /* some value */ };
             return (
-                <MyContext.Provider value={{ value, setValue }}>
-                    {props.children}
+                <MyContext.Provider value={value}>
+                    {children}
                 </MyContext.Provider>
             );
         }
 
-        const MyComponent = () => {
-            const { value } = useContext(MyContext);
-            return <div>{value}</div>;
-        }
+        export const MyConsumber = () => useContext(MyContext);
+        ------------------------------------
+        Explanation:-
+            * Here we create a context object using `createContext()`.
+            * The `MyProvider` component is used to provide the context to its children.
+            * The `MyConsumer` component is used to consume the context value.
+
+---------------------------------------------------------------------------------------------
+contextProvider:-
+    * This is a component that provides the context to its children.
+    * The `value` prop is used to pass the data to the context.
+    * It returns the context provider with the value prop.
+
+---------------------------------------------------------------------------------------------
+React memo (React.memo):-
+    * This is a higher-order component that memoizptopes the result of a component.
+    * It prevents unnecessary re-renders of the component if the props have not changed.
+    * It is used to optimize performance.
+
+    Ex:-
+        const MyComponent = React.memo((props) => {
+            return <div>{props.value}</div>;
+        });
+
+        export default MyComponent;
         --------------------------------------------------------
         Explanation:-
-            Here the `MyContext` is the context object, which is created using the `createContext()` method and is used to create a context provider.
-
----------------------------------------------------------------------------------------------
-
-
----------------------------------------------------------------------------------------------
-
+            Here the `MyComponent` is memoized using the `React.memo()` method, which prevents unnecessary re-renders if the props have not changed.
 
 ---------------------------------------------------------------------------------------------
 ***************************************************************************************
@@ -265,4 +285,286 @@ Context:-
                                     Week 2
 
 ***************************************************************************************
+---------------------------------------------------------------------------------------------
+useState hook:-
+    * This is a built-in hook that allows you to add state to functional components.
+    * It returns an array with two elements: the current state and a function to update the state.
+    * The `useState` hook takes an initial value as an argument.
+
+    Ex:-
+        import React, { useState } from 'react';
+
+        // This will create a functional component
+        // The `setCount` function is used to update the state
+        // The `count` variable is used to store the current state
+        const [count, setCount] = useState(0);
+
+        const increment = () => {
+            setCount(count + 1);
+        }
+
+        return (
+            <button onClick={increment}>{count}</button>
+        );
+        --------------------------------------------------------
+        Explanation:-
+
+---------------------------------------------------------------------------------------------
+Array destructuring:-
+    * This is a JavaScript feature that allows you to extract values from arrays and assign them to variables.
+    * It is used to extract values from the array returned by the `useState` hook, so that we can only change the specific value we want to change.
+
+    Ex:-
+
+        import { useState } from 'react';
+
+        const [name, count, setCount] = useState({
+            name: "ABCD"
+            count: 0
+        });
+
+        function increment(){
+            setCount({
+                ...var,
+                count: count + 1
+            });
+        }
+
+        --------------------------------------------
+        The output will be:
+        { name: "ABCD", count: 1 }
+
+        Explanation:-
+            * In the increment function we are taking the array and destructuring it into two variables.
+            * The `count` variable is changed to `count + 1` and the `name` variable is unchanged.
+
+---------------------------------------------------------------------------------------------
+Pure function:-
+    * Function that always returns the same output for the same input.
+    * It does not have any side effects, meaning it does not modify any external state or variables.
+    * These are easier to test and reason about.
+
+    Ex:-
+        const add = (a, b) => {
+            return a + b;
+        }
+
+        console.log(add(2, 3)); // 5
+        --------------------------------------
+        Explanation:-
+            Here the `add` function is a pure function because it always returns the same output for the same input.
+
+---------------------------------------------------------------------------------------------
+Impure function:-
+    * An impure function is a function that does not always return the same output for the same input.
+    * It may modify external state or variables, which can lead to unexpected behavior, such as printing the output in the console.
+
+    Ex:-
+        let count = 0;
+
+        const increment = () => {
+            console.log(count);
+            count++;
+            return count;
+        }
+
+        console.log(increment()); // 1
+        console.log(increment()); // 2
+        console.log(increment()); // 3
+        --------------------------------------
+        Explanation:-
+            Here the `increment` function is an impure function because it modifies the external `count` variable.
+
+---------------------------------------------------------------------------------------------
+useEffect hook:-
+    * This is a built-in hook that allows you to perform side effects in functional components.
+    * It is used to handle lifecycle events such as componentDidMount, componentDidUpdate, and componentWillUnmount.
+    * It takes two arguments:
+        i. Function to run the side effect
+        ii. Array of dependencies.
+
+    Ex:-
+        import React, { useState, useEffect } from 'react';
+
+        const MyComponent = () => {
+            const [count, setCount] = useState(0);
+
+            useEffect(() => {
+                document.title = `Count: ${count}`;
+            }, [count]);
+
+            return (
+                <button onClick={() => setCount(count + 1)}>
+                    Count: {count}
+                </button>
+            );
+        }
+
+        export default MyComponent;
+        --------------------------------------------------------
+        Explanation:-
+            Here the `useEffect` hook is used to update the document title whenever the `count` state changes.
+
+---------------------------------------------------------------------------------------------
+Dependency array:-
+    * This is the second argument of the `useEffect` hook.
+    * It is an array of values that the effect depends on.
+    * If any of the values in the array change, the effect will run again.
+    * If the array is empty, the effect will only run once when the component mounts.
+
+    Ex:-
+        useEffect(() => {
+            // Effect code here
+        }, [count]);
+        --------------------------------------------------------
+        Explanation:-
+            Here the effect will run whenever the `count` state changes.
+
+---------------------------------------------------------------------------------------------
+Rules of calling a hook:-
+    i. Only call hooks at the top level.
+    ii. Only call hooks from React function components.
+    iii. Call multiple hooks in the same order.
+    iv. Make multiple hook calls in the same order
+
+---------------------------------------------------------------------------------------------
+Fetch API:-
+    * This is a built-in JavaScript function that allows you to make network requests.
+    * It returns a promise that resolves to the response of the request.
+    * It is used to fetch data from an API.
+
+    Ex:-
+        fetch('https://api.example.com/data')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error)
+        );
+        --------------------------------------------------------
+        Explanation:-
+            Here the `fetch` function is used to make a GET request to the specified URL and log the response data to the console.
+
+---------------------------------------------------------------------------------------------
+Scenario:- we want to fetch data from a website and store it insdie a variable named `dailySpecials` and show it in the componenet, here is the code for that.
+
+Code:-
+    import {useEffect, useState} from 'react';
+
+    export default function App{
+        const [dailySpecials, setDailySpecials] = useState([]);
+
+        useEffect(() => {
+            fetch('https://api.example.com/dailySpecials')
+                .then(response => response.json())
+                .then(data => setDailySpecials(data))
+                .catch(error => console.error('Error:', error));
+        }, []);
+
+        return (
+            <div>
+                {dailySpecials.length > 0 ? (
+                    <ul>
+                        {dailySpecials.map(special => (
+                            <li key={special.id}>
+                                {special.name}
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p>No daily specials available</p>
+                )}
+            </div>
+        );
+
+---------------------------------------------------------------------------------------------
+Conditional return statement:-
+    * This is a way to conditionally render a component based on a certain condition.
+    * It is used to render different components or elements based on the state or props.
+
+    Ex:-
+        Scenario:-
+            * We are fetching an array with the name of `array` and then we are printing it, before checking whether the array is empty or not.
+            * To not break the code we use the conditional return statement.
+
+        code:-
+        ---------------------------------------------------------
+        const MyComponent = () => {
+            const array = fetch('url');
+
+            return array.length > 0 ? (
+                <div>
+                    <h2> Array length is: {array.length}</h2>
+                </div>
+            ) : (
+                <h2>No data found </h2>
+            );
+        }
+        --------------------------------------------------------
+        Explanation:-
+            Here the `array` is checked for its length and if it is greater than 0, then the first block is executed.
+            If not then the second block is executed.
+
+---------------------------------------------------------------------------------------------
+useReducer hook:-
+    * This is a built-in hook that allows you to manage complex state in functional components.
+    * It is used to handle state updates in a more predictable way.
+    * It takes two arguments:
+        i. Reducer function
+        ii. Initial state
+
+    Ex:-
+        import React, { useReducer } from 'react';
+
+        const initialState = { count: 0 };
+
+        const reducer = (state, action) => {
+            switch (action.type) {
+                case 'increment':
+                    return { count: state.count + 1 };
+                case 'decrement':
+                    return { count: state.count - 1 };
+                default:
+                    throw new Error();
+            }
+        }
+
+        const MyComponent = () => {
+            const [state, dispatch] = useReducer(reducer, initialState);
+
+            return (
+                <div>
+                    Count: {state.count}
+                    <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+                    <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+                </div>
+            );
+        }
+
+        export default MyComponent;
+
+---------------------------------------------------------------------------------------------
+useRef hook:-
+    * This is a built-in hook that allows you to create a mutable reference to a DOM element or a value.
+    * It is used to access the DOM directly or to store a value that does not trigger a re-render when it changes.
+    * It returns a mutable object with a `current` property.
+
+    Ex:-
+        import React, { useRef } from 'react';
+
+        const MyComponent = () => {
+            const inputRef = useRef(null);
+
+            const focusInput = () => {
+                inputRef.current.focus();
+            }
+
+            return (
+                <div>
+                    <input ref={inputRef} type="text" />
+                    <button onClick={focusInput}>Focus Input</button>
+                </div>
+            );
+        }
+
+        export default MyComponent;
+
 ---------------------------------------------------------------------------------------------
