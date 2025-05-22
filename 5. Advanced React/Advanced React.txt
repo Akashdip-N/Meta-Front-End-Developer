@@ -568,3 +568,344 @@ useRef hook:-
         export default MyComponent;
 
 ---------------------------------------------------------------------------------------------
+***************************************************************************************
+
+                                    Week 3
+
+***************************************************************************************
+---------------------------------------------------------------------------------------------
+JSX components, elements:-
+    * JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files.
+    * It is used to create React elements and components.
+    * JSX elements are the building blocks of React applications.
+
+    Ex:-
+        const element = <h1>Hello, world!</h1>;
+        const component = () => <h1>Hello, world!</h1>;
+
+        console.log(element);
+        console.log(component);
+        ----------------------------------------
+        The output will be:
+        <h1>Hello, world!</h1>
+        [Function: component]
+
+    Explanation:-
+        Here the `element` is a JSX element and the `component` is a JSX component.
+
+---------------------------------------------------------------------------------------------
+Component composition:-
+    * This is a way to combine multiple components to create a new component.
+    * It is used to create reusable components and to break down complex components into smaller, more manageable pieces.
+
+Types of composition:-
+    i. Containment:-
+        * When a component don't know its children beforehand, it can use `props.children` to render whatever it is passed as children.
+        * Ex:- Sidebar, Dialog, Popover, etc.
+        * Code example:-
+            const MyComponent = (props) => {
+                return (
+                    <div>
+                        {props.children}
+                    </div>
+                );
+            }
+
+            export default MyComponent;
+            ----------------------------------------
+            Explanation:-
+                Here the `MyComponent` uses `props.children` to render its children.
+
+    ii. Specialization:-
+        * When a component is a specialized version of another component, it can use `props` to pass data to the parent component.
+        * Ex:- Button, Input, etc.
+        * Code example:-
+            const MyComponent = (props) => {
+                return (
+                    <div>
+                        <h1>{props.title}</h1>
+                        <p>{props.description}</p>
+                    </div>
+                );
+            }
+
+            export default MyComponent;
+            ----------------------------------------
+            Explanation:-
+                Here the `MyComponent` uses `props` to pass data to the parent component.
+
+    iii. Combination of both:-
+        * When a component is a combination of both containment and specialization, it can use `props` and `props.children` to pass data to the parent component.
+        * Ex:- Form, Table, etc.
+        * Code example:-
+            function Dialog(props) {
+                return (
+                    <div>
+                        <h1>{props.title}</h1>
+                        <p>{props.description}</p>
+                        {props.children}
+                    </div>
+                );
+            }
+
+            function App() {
+                return (
+                    <Dialog title="Hello" description="This is a dialog">
+                        <p>First dialog</p>
+                    </Dialog>
+                    <Dialog title="World" description="This is another dialog">
+                        <p>Second dialog</p>
+                    </Dialog>
+                );
+            }
+---------------------------------------------------------------------------------------------
+Types of children:-
+    i. String Literal:-
+        * This is a simple string that is passed as a child to a component.
+        * It is used to render simple text.
+
+        Ex:-
+            const MyComponent = () => {
+                return <h1>Hello, world!</h1>;
+            }
+
+    ii. JSX Element:-
+        * This is a JSX element that is passed as a child to a component.
+        * It is used to render complex elements.
+
+        Ex:-
+            const MyComponent = () => {
+                return <h1><span>Hello, world!</span></h1>;
+            }
+
+    iii. JavaScript expressions:-
+        * This is a JavaScript expression that is passed as a child to a component.
+        * It is used to render dynamic content.
+
+        Ex:-
+            const MyComponent = () => {
+                const name = "John";
+                return <h1>Hello, {name}!</h1>;
+            }
+
+    iv. Functions:-
+        * This is a function that is passed as a child to a component.
+        * It is used to render dynamic content.
+
+        Ex:-
+            const MyComponent = () => {
+                const renderContent = () => {
+                    return <span>Hello, world!</span>;
+                }
+                return <h1>{renderContent()}</h1>;
+            }
+
+    v. Boolean, Null & undefined:-
+        * Boolean, null and undefined values are ignored by React.
+        * But they can be used to conditionally render elements.
+
+        Ex:-
+            const MyComponent = () => {
+                const isVisible = true;
+                return (
+                    <div>
+                        {isVisible && <h1>Hello, world!</h1>}
+                    </div>
+                );
+            }
+
+---------------------------------------------------------------------------------------------
+React.cloneElement:-
+    * This is a method that allows you to clone a React element and pass new props to it.
+    * Syntax:-
+        React.cloneElement(element, [props], [...children])
+    * This function is used for the following reasons:
+        i. Modify child properties.
+        ii. Add new properties to the child.
+        iii. Extend the functionality of the child.
+
+    Ex:-
+        const MyComponent = (props) => {
+            return React.cloneElement(
+                props.children,
+                { className: 'new-class' }
+            );
+        }
+
+        export default MyComponent;
+        ----------------------------------------
+        Explanation:-
+            Here the `MyComponent` clones its child element and adds a new class name to it.
+
+---------------------------------------------------------------------------------------------
+React.Children:-
+    * This is a utility that provides methods for dealing with the `props.children` prop.
+    * It is used to manipulate and iterate over the children of a component.
+
+    Ex:-
+        const MyComponent = (props) => {
+            return React.Children.map(props.children, child => {
+                return React.cloneElement(child, { className: 'new-class' });
+            });
+        }
+
+        export default MyComponent;
+        ----------------------------------------
+        Explanation:-
+            Here the `MyComponent` uses `React.Children.map()` to iterate over its children and clone each child with a new class name.
+
+---------------------------------------------------------------------------------------------
+React.children.map:-
+    * This is a method that allows you to iterate over the `props.children` prop and apply a function to each child.
+    * It is used to manipulate and transform the children of a component.
+
+    Ex:-
+        const MyComponent = (props) => {
+            return React.Children.map(props.children, child => {
+                return React.cloneElement(child, { className: 'new-class' });
+            });
+        }
+
+        export default MyComponent;
+        ----------------------------------------
+        Explanation:-
+            Here the `MyComponent` uses `React.Children.map()` to iterate over its children and clone each child with a new class name.
+
+---------------------------------------------------------------------------------------------
+Spread operator (...)
+    * This is a JavaScript feature that allows you to expand an iterable (like an array or object) into its individual elements.
+    * It is used to pass props to a component or to merge objects.
+
+    Ex:-
+        const order = {
+            id: 1,
+            name: "John",
+            items: ["item1", "item2"]
+            price: "$100"
+        };
+
+        const changeOrder = {
+            ...order,
+            price: "$200"
+        };
+        console.log(changeOrder);
+
+        ----------------------------------------
+        The output will be:
+        {
+            id: 1, name: "John",
+            items: ["item1", "item2"],
+            price: "$200"
+        }
+
+---------------------------------------------------------------------------------------------
+Cross-Cutting Concerns:-
+    * These are the concerns that affect multiple parts of an application.
+    * They are used to separate concerns and improve code organization.
+    * Examples include logging, authentication, and error handling.
+
+    Ex:-
+        const withLogging = (WrappedComponent) => {
+            return class extends React.Component {
+                componentDidMount() {
+                    console.log('Component mounted');
+                }
+
+                render() {
+                    return <WrappedComponent {...this.props} />;
+                }
+            }
+        }
+
+        export default withLogging;
+        ----------------------------------------
+        Explanation:-
+            Here the `withLogging` function is a higher-order component that adds logging functionality to the wrapped component.
+
+---------------------------------------------------------------------------------------------
+Higher-order component:-
+    * This is a function that takes a component as an argument and returns a new component.
+    * It is used to add functionality to a component without modifying the original component.
+    * It is used to share common functionality between components.
+
+    * Best practices for HOCs:
+        i. Never mutate a component inside a HOC.
+        ii. Always pass unrelated props to your wrapped component.
+        iii. Maximize the composability by leveraging the Component => Component signature.
+
+    * Caveats of HOCs:
+        i. Not to use HOCs inside other component.
+        ii. Refs aren't passed through HOCs.
+
+---------------------------------------------------------------------------------------------
+Render Props:-
+    * This is a pattern that allows you to share code between components using a prop whose value is a function.
+    * It is used to pass data and behavior to a component.
+    * It takes a function that retuns a React elements and calls them inside their render logic.
+
+    Ex:-
+        const MyComponent = ({ render }) => {
+            return (
+                <div>
+                    {render()}
+                </div>
+            );
+        }
+
+        export default MyComponent;
+        ----------------------------------------
+        Explanation:-
+            Here the `MyComponent` uses the `render` prop to render its content.
+
+---------------------------------------------------------------------------------------------
+Testing tools and techniques:-
+    i. JEST
+        * This is a JavaScript testing framework that is used to test React applications.
+        * It provides a simple and easy-to-use API for writing tests.
+        * It is used to test components, functions, and APIs.
+
+---------------------------------------------------------------------------------------------
+Screening library:-
+    * This is a library that is used to test React components.
+    * It provides the entire page to the test and allows you to interact with it.
+
+    Ex:-
+        import { render, screen } from '@testing-library/react';
+        import MyComponent from './MyComponent';
+
+        test('renders MyComponent', () => {
+            render(<MyComponent />);
+            const linkElement = screen.getByText(/learn react/i);
+            expect(linkElement).toBeInTheDocument();
+        });
+
+---------------------------------------------------------------------------------------------
+Two ways to find an element in JEST:-
+    i. By text
+        * This is used to find an element by its text content.
+        * It is used to test the content of an element.
+
+        Ex:-
+            JS code
+            ------------------------------------
+
+
+
+            Test code
+            ------------------------------------
+
+    ii. By role
+        * This is used to find an element by its role.
+        * It is used to test the accessibility of an element.
+
+        Ex:-
+            const { getByRole } = render(<MyComponent />);
+            const button = getByRole('button');
+            expect(button).toBeInTheDocument();
+
+---------------------------------------------------------------------------------------------
+Style Guide:-
+    * These are the guidelines and best practices for writing React applications.
+    * It is used to maintain consistency and readability in the codebase.
+
+---------------------------------------------------------------------------------------------
