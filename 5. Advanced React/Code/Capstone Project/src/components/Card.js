@@ -6,21 +6,25 @@ import React from "react";
 const Card = ({ title, description, imageSrc }) => {
   return (
     <VStack
+      color="black"
       backgroundColor="white"
-      borderRadius="8px"
-      boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
-      overflow="hidden"
-      spacing={0}
+      borderRadius="xl"
+      cursor="pointer"
     >
-      <Image src={imageSrc} alt={title} width="100%" height="200px" objectFit="cover" />
-      <VStack p={4} alignItems="flex-start">
-        <Heading as="h3" size="lg" mb={2} color="#000000">
-          {title}
-        </Heading>
-        <Text mb={4} color="#000000" >{description}</Text>
-        <HStack spacing={2} color="#3182ce">
-          <Text>View Project</Text>
-          <FontAwesomeIcon icon={faArrowRight} />
+      <Image src={imageSrc} alt={title} />
+      <VStack spacing={4} p={4} alignItems="flex-start">
+        <HStack justifyContent="space-between" alignItems="center">
+          <Heading as="h3" size="md">
+            {title}
+          </Heading>
+        </HStack>
+
+        <Text color="#64748b" fontSize="lg">
+          {description}
+        </Text>
+        <HStack spacing={2} alignItems="center">
+          <p>See More</p>
+          <FontAwesomeIcon icon={faArrowRight} size="xl"/>
         </HStack>
       </VStack>
     </VStack>
