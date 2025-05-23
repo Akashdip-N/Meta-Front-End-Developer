@@ -909,3 +909,50 @@ Style Guide:-
     * It is used to maintain consistency and readability in the codebase.
 
 ---------------------------------------------------------------------------------------------
+Formik library:-
+    * This is a library that is used to manage forms in React applications.
+    * It provides a simple and easy-to-use API for handling form state, validation, and submission.
+    * It is used to simplify the process of building forms in React.
+
+    Ex:-
+        import React from 'react';
+        import { Formik, Form, Field } from 'formik';
+
+        const MyForm = () => {
+            return (
+                <Formik
+                    initialValues={{ name: '' }}
+                    onSubmit={values => {
+                        console.log(values);
+                    }}
+                >
+                    <Form>
+                        <Field name="name" placeholder="Name" />
+                        <button type="submit">Submit</button>
+                    </Form>
+                </Formik>
+            );
+        }
+
+        export default MyForm;
+
+---------------------------------------------------------------------------------------------
+Chakra UI:-
+    * This is a library that provides a set of accessible and reusable components for building React applications.
+    * It is used to simplify the process of building user interfaces in React.
+    * It provides a simple and easy-to-use API for styling components.
+
+    Ex:-
+        import { Button } from '@chakra-ui/react';
+
+        const MyButton = () => {
+            return (
+                <Button colorScheme="teal" size="lg">
+                    Click me
+                </Button>
+            );
+        }
+
+        export default MyButton;
+
+---------------------------------------------------------------------------------------------
