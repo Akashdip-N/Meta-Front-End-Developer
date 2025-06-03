@@ -150,7 +150,6 @@ ii. Controlled components:-
 Forms using react:-
     * Forms are used to collect user input.
     * React provides a way to handle forms using controlled components and uncontrolled components.
-    *
 
 ---------------------------------------------------------------------------------------------
 preventDefault():-
